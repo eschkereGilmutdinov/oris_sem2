@@ -35,13 +35,14 @@
             labelTurnWho = new Label();
             pictureBoxDeck = new PictureBox();
             imageListCards = new ImageList(components);
-            listViewHand = new ListView();
+            listViewStall = new ListView();
             listView1 = new ListView();
             listView2 = new ListView();
             listView3 = new ListView();
             nickname1 = new Label();
             nickname2 = new Label();
             nickname3 = new Label();
+            buttonShowHand = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBoxDeck).BeginInit();
             SuspendLayout();
             // 
@@ -92,15 +93,15 @@
             imageListCards.ImageSize = new Size(159, 222);
             imageListCards.TransparentColor = Color.Transparent;
             // 
-            // listViewHand
+            // listViewStall
             // 
-            listViewHand.LargeImageList = imageListCards;
-            listViewHand.Location = new Point(263, 653);
-            listViewHand.MultiSelect = false;
-            listViewHand.Name = "listViewHand";
-            listViewHand.Size = new Size(759, 217);
-            listViewHand.TabIndex = 4;
-            listViewHand.UseCompatibleStateImageBehavior = false;
+            listViewStall.LargeImageList = imageListCards;
+            listViewStall.Location = new Point(263, 653);
+            listViewStall.MultiSelect = false;
+            listViewStall.Name = "listViewStall";
+            listViewStall.Size = new Size(759, 217);
+            listViewStall.TabIndex = 4;
+            listViewStall.UseCompatibleStateImageBehavior = false;
             // 
             // listView1
             // 
@@ -153,18 +154,29 @@
             nickname3.TabIndex = 10;
             nickname3.Text = "Имя игрока";
             // 
+            // buttonShowHand
+            // 
+            buttonShowHand.Location = new Point(1050, 828);
+            buttonShowHand.Name = "buttonShowHand";
+            buttonShowHand.Size = new Size(170, 42);
+            buttonShowHand.TabIndex = 11;
+            buttonShowHand.Text = "Показать руку";
+            buttonShowHand.UseVisualStyleBackColor = true;
+            buttonShowHand.Click += async (_, __) => await RequestAndShowHandAsync();
+            // 
             // FormGame
             // 
             AutoScaleDimensions = new SizeF(11F, 28F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1514, 882);
+            Controls.Add(buttonShowHand);
             Controls.Add(nickname3);
             Controls.Add(nickname2);
             Controls.Add(nickname1);
             Controls.Add(listView3);
             Controls.Add(listView2);
             Controls.Add(listView1);
-            Controls.Add(listViewHand);
+            Controls.Add(listViewStall);
             Controls.Add(pictureBoxDeck);
             Controls.Add(labelTurnWho);
             Controls.Add(labelMyNick);
@@ -185,12 +197,13 @@
         private Label labelTurnWho;
         private PictureBox pictureBoxDeck;
         private ImageList imageListCards;
-        private ListView listViewHand;
+        private ListView listViewStall;
         private ListView listView1;
         private ListView listView2;
         private ListView listView3;
         private Label nickname1;
         private Label nickname2;
         private Label nickname3;
+        private Button buttonShowHand;
     }
 }

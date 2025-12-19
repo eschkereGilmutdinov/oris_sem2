@@ -114,6 +114,26 @@ public class Room
                         continue;
                     }
 
+                    if (string.Equals(action, "GET_HAND", StringComparison.OrdinalIgnoreCase))
+                    {
+                        object[] cards;
+                        lock (_locker)
+                        {
+                            cards = _hands[me.Player.PlayerId]
+                                .Select(ci => new { instanceId = ci.InstanceId, cardId = ci.CardId })
+                                .Cast<object>()
+                                .ToArray();
+                        }
+
+                        await Protocol.WriteJsonAsync(stream, new
+                        {
+                            type = "HAND",
+                            payload = new { cards }
+                        });
+
+                        continue;
+                    }
+
                     if (me.Player.PlayerId != _currentTurnPlayerId)
                     {
                         await Protocol.WriteJsonAsync(stream, new
@@ -126,6 +146,16 @@ public class Room
 
                 if (string.Equals(action, "DRAW", StringComparison.OrdinalIgnoreCase))
                 {
+                    if (_hands[me.Player.PlayerId].Count >= 7)
+                    {
+                        await Protocol.WriteJsonAsync(stream, new
+                        {
+                            type = "ERROR",
+                            payload = new { message = "В руке максимум 7 карт" }
+                        });
+                        continue;
+                    }
+
                     CardInstance? drawn = null;
 
                     lock (_locker)

@@ -37,6 +37,9 @@ namespace ClientWinForm
 
             UpdateMyNickLabel();
             Shown += (_, __) => _ = ListenAsync(_cts.Token);
+
+            Controls.Add(buttonShowHand);
+            buttonShowHand.BringToFront();
         }
 
         private async Task ListenAsync(CancellationToken ct)
@@ -119,9 +122,22 @@ namespace ClientWinForm
                                 ImageKey = instanceId
                             };
                             item.Tag = cardId;
-
-                            listViewHand.Items.Add(item);
                         });
+                    }
+                    else if (type == "HAND")
+                    {
+                        var cardsEl = root.GetProperty("payload").GetProperty("cards");
+
+                        var cardIds = new List<string>();
+                        foreach (var c in cardsEl.EnumerateArray())
+                            cardIds.Add(c.GetProperty("cardId").GetString() ?? "");
+
+                        BeginInvoke(() => ShowHandModal(cardIds));
+                    }
+                    else if (type == "ERROR")
+                    {
+                        var msg = root.GetProperty("payload").GetProperty("message").GetString() ?? "Unknown error";
+                        BeginInvoke(new Action(() => MessageBox.Show("Ошибка: " + msg)));
                     }
                     else
                     {
@@ -183,6 +199,58 @@ namespace ClientWinForm
                 labelMyNick.Text = $"Твой никнейм: {myNick}";
             else
                 labelMyNick.Text = "Твой никнейм: (неизвестно)";
+        }
+
+        private async Task RequestAndShowHandAsync()
+        {
+            try
+            {
+                await Protocol.WriteJsonAsync(_stream, new
+                {
+                    type = "ACTION",
+                    payload = new { action = "GET_HAND" }
+                });
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Не удалось запросить руку: " + ex.Message);
+            }
+        }
+
+        private void ShowHandModal(List<string> cardIds)
+        {
+            var dlg = new Form
+            {
+                Text = "Моя рука",
+                StartPosition = FormStartPosition.CenterParent,
+                Width = 900,
+                Height = 600
+            };
+
+            var panel = new FlowLayoutPanel
+            {
+                Dock = DockStyle.Fill,
+                AutoScroll = true,
+                WrapContents = true
+            };
+
+            foreach (var cardId in cardIds)
+            {
+                var img = CardImageLoader.Load(cardId);
+
+                var pb = new PictureBox
+                {
+                    Width = 120,
+                    Height = 180,
+                    SizeMode = PictureBoxSizeMode.Zoom,
+                    Image = img
+                };
+
+                panel.Controls.Add(pb);
+            }
+
+            dlg.Controls.Add(panel);
+            dlg.ShowDialog(this);
         }
     }
 }
