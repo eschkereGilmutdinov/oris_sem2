@@ -1,0 +1,1989 @@
+{
+  "version": 1,
+  "cards": [
+    {
+      "id": "C001",
+      "name": "Baby Unicorn of Incest",
+      "type": "BabyUnicornCard",
+      "rule": "If this card would be sacrificed, destroyed, or returned to your hand, return it to the Nursery instead.",
+      "image": "baby01.png",
+      "copiesInDeck": 1,
+      "effects": [
+        {
+          "kind": "REPLACE_EVENT",
+          "timing": "STATIC",
+          "when": {
+            "events": [ "SACRIFICE", "DESTROY", "RETURN_TO_HAND" ],
+            "target": "SELF"
+          },
+          "replaceWith": { "moveTo": "NURSERY" }
+        }
+      ],
+      "tags": [ "baby_unicorn", "replacement", "protection" ]
+    },
+    {
+      "id": "C002",
+      "name": "Bye Bye Baby Unicorn",
+      "type": "BabyUnicornCard",
+      "rule": "If this card would be sacrificed, destroyed, or returned to your hand, return it to the Nursery instead.",
+      "image": "baby02.png",
+      "copiesInDeck": 1,
+      "effects": [
+        {
+          "kind": "REPLACE_EVENT",
+          "timing": "STATIC",
+          "when": {
+            "events": [ "SACRIFICE", "DESTROY", "RETURN_TO_HAND" ],
+            "target": "SELF"
+          },
+          "replaceWith": { "moveTo": "NURSERY" }
+        }
+      ],
+      "tags": [ "baby_unicorn", "replacement", "protection" ]
+    },
+    {
+      "id": "C003",
+      "name": "Cannibal Baby Unicorn",
+      "type": "BabyUnicornCard",
+      "rule": "If this card would be sacrificed, destroyed, or returned to your hand, return it to the Nursery instead.",
+      "image": "baby03.png",
+      "copiesInDeck": 1,
+      "effects": [
+        {
+          "kind": "REPLACE_EVENT",
+          "timing": "STATIC",
+          "when": {
+            "events": [ "SACRIFICE", "DESTROY", "RETURN_TO_HAND" ],
+            "target": "SELF"
+          },
+          "replaceWith": { "moveTo": "NURSERY" }
+        }
+      ],
+      "tags": [ "baby_unicorn", "replacement", "protection" ]
+    },
+    {
+      "id": "C004",
+      "name": "Conjoined Baby Unicorn",
+      "type": "BabyUnicornCard",
+      "rule": "If this card would be sacrificed, destroyed, or returned to your hand, return it to the Nursery instead.",
+      "image": "baby04.png",
+      "copiesInDeck": 1,
+      "effects": [
+        {
+          "kind": "REPLACE_EVENT",
+          "timing": "STATIC",
+          "when": {
+            "events": [ "SACRIFICE", "DESTROY", "RETURN_TO_HAND" ],
+            "target": "SELF"
+          },
+          "replaceWith": { "moveTo": "NURSERY" }
+        }
+      ],
+      "tags": [ "baby_unicorn", "replacement", "protection" ]
+    },
+    {
+      "id": "C005",
+      "name": "Dumpster Baby Unicorn",
+      "type": "BabyUnicornCard",
+      "rule": "If this card would be sacrificed, destroyed, or returned to your hand, return it to the Nursery instead.",
+      "image": "baby05.png",
+      "copiesInDeck": 1,
+      "effects": [
+        {
+          "kind": "REPLACE_EVENT",
+          "timing": "STATIC",
+          "when": {
+            "events": [ "SACRIFICE", "DESTROY", "RETURN_TO_HAND" ],
+            "target": "SELF"
+          },
+          "replaceWith": { "moveTo": "NURSERY" }
+        }
+      ],
+      "tags": [ "baby_unicorn", "replacement", "protection" ]
+    },
+    {
+      "id": "C006",
+      "name": "Faceless Baby Unicorn",
+      "type": "BabyUnicornCard",
+      "rule": "If this card would be sacrificed, destroyed, or returned to your hand, return it to the Nursery instead.",
+      "image": "baby06.png",
+      "copiesInDeck": 1,
+      "effects": [
+        {
+          "kind": "REPLACE_EVENT",
+          "timing": "STATIC",
+          "when": {
+            "events": [ "SACRIFICE", "DESTROY", "RETURN_TO_HAND" ],
+            "target": "SELF"
+          },
+          "replaceWith": { "moveTo": "NURSERY" }
+        }
+      ],
+      "tags": [ "baby_unicorn", "replacement", "protection" ]
+    },
+    {
+      "id": "C007",
+      "name": "Fucking Cute Baby Unicorn",
+      "type": "BabyUnicornCard",
+      "rule": "If this card would be sacrificed, destroyed, or returned to your hand, return it to the Nursery instead.",
+      "image": "baby07.png",
+      "copiesInDeck": 1,
+      "effects": [
+        {
+          "kind": "REPLACE_EVENT",
+          "timing": "STATIC",
+          "when": {
+            "events": [ "SACRIFICE", "DESTROY", "RETURN_TO_HAND" ],
+            "target": "SELF"
+          },
+          "replaceWith": { "moveTo": "NURSERY" }
+        }
+      ],
+      "tags": [ "baby_unicorn", "replacement", "protection" ]
+    },
+    {
+      "id": "C008",
+      "name": "Fucking Ugly Baby Unicorn",
+      "type": "BabyUnicornCard",
+      "rule": "If this card would be sacrificed, destroyed, or returned to your hand, return it to the Nursery instead.",
+      "image": "baby08.png",
+      "copiesInDeck": 1,
+      "effects": [
+        {
+          "kind": "REPLACE_EVENT",
+          "timing": "STATIC",
+          "when": {
+            "events": [ "SACRIFICE", "DESTROY", "RETURN_TO_HAND" ],
+            "target": "SELF"
+          },
+          "replaceWith": { "moveTo": "NURSERY" }
+        }
+      ],
+      "tags": [ "baby_unicorn", "replacement", "protection" ]
+    },
+    {
+      "id": "C009",
+      "name": "Pageant Baby Unicorn",
+      "type": "BabyUnicornCard",
+      "rule": "If this card would be sacrificed, destroyed, or returned to your hand, return it to the Nursery instead.",
+      "image": "baby09.png",
+      "copiesInDeck": 1,
+      "effects": [
+        {
+          "kind": "REPLACE_EVENT",
+          "timing": "STATIC",
+          "when": {
+            "events": [ "SACRIFICE", "DESTROY", "RETURN_TO_HAND" ],
+            "target": "SELF"
+          },
+          "replaceWith": { "moveTo": "NURSERY" }
+        }
+      ],
+      "tags": [ "baby_unicorn", "replacement", "protection" ]
+    },
+    {
+      "id": "C010",
+      "name": "Shotgun Baby Unicorn",
+      "type": "BabyUnicornCard",
+      "rule": "If this card would be sacrificed, destroyed, or returned to your hand, return it to the Nursery instead.",
+      "image": "baby10.png",
+      "copiesInDeck": 1,
+      "effects": [
+        {
+          "kind": "REPLACE_EVENT",
+          "timing": "STATIC",
+          "when": {
+            "events": [ "SACRIFICE", "DESTROY", "RETURN_TO_HAND" ],
+            "target": "SELF"
+          },
+          "replaceWith": { "moveTo": "NURSERY" }
+        }
+      ],
+      "tags": [ "baby_unicorn", "replacement", "protection" ]
+    },
+    {
+      "id": "C011",
+      "name": "Someone Else's Baby Unicorn",
+      "type": "BabyUnicornCard",
+      "rule": "If this card would be sacrificed, destroyed, or returned to your hand, return it to the Nursery instead.",
+      "image": "baby11.png",
+      "copiesInDeck": 1,
+      "effects": [
+        {
+          "kind": "REPLACE_EVENT",
+          "timing": "STATIC",
+          "when": {
+            "events": [ "SACRIFICE", "DESTROY", "RETURN_TO_HAND" ],
+            "target": "SELF"
+          },
+          "replaceWith": { "moveTo": "NURSERY" }
+        }
+      ],
+      "tags": [ "baby_unicorn", "replacement", "protection" ]
+    },
+    {
+      "id": "C012",
+      "name": "Tasty Baby Unicorn",
+      "type": "BabyUnicornCard",
+      "rule": "If this card would be sacrificed, destroyed, or returned to your hand, return it to the Nursery instead.",
+      "image": "baby12.png",
+      "copiesInDeck": 1,
+      "effects": [
+        {
+          "kind": "REPLACE_EVENT",
+          "timing": "STATIC",
+          "when": {
+            "events": [ "SACRIFICE", "DESTROY", "RETURN_TO_HAND" ],
+            "target": "SELF"
+          },
+          "replaceWith": { "moveTo": "NURSERY" }
+        }
+      ],
+      "tags": [ "baby_unicorn", "replacement", "protection" ]
+    },
+    {
+      "id": "C013",
+      "name": "Upside Down Baby Unicorn",
+      "type": "BabyUnicornCard",
+      "rule": "If this card would be sacrificed, destroyed, or returned to your hand, return it to the Nursery instead.",
+      "image": "baby13.png",
+      "copiesInDeck": 1,
+      "effects": [
+        {
+          "kind": "REPLACE_EVENT",
+          "timing": "STATIC",
+          "when": {
+            "events": [ "SACRIFICE", "DESTROY", "RETURN_TO_HAND" ],
+            "target": "SELF"
+          },
+          "replaceWith": { "moveTo": "NURSERY" }
+        }
+      ],
+      "tags": [ "baby_unicorn", "replacement", "protection" ]
+    },
+
+    {
+      "id": "C014",
+      "name": "Fuckboi Unicorn",
+      "type": "BasicUnicornCard",
+      "rule": "send pics",
+      "image": "basicUnicorn01.png",
+      "copiesInDeck": 3,
+      "effects": [],
+      "tags": [ "basic_unicorn", "no_effect", "flavor" ]
+    },
+    {
+      "id": "C015",
+      "name": "Horse With A Dildo",
+      "type": "BasicUnicornCard",
+      "rule": "Sometimes a horse just needs to feel a little special.",
+      "image": "basicUnicorn02.png",
+      "copiesInDeck": 3,
+      "effects": [],
+      "tags": [ "basic_unicorn", "no_effect", "flavor" ]
+    },
+    {
+      "id": "C016",
+      "name": "Single Unicorn",
+      "type": "BasicUnicornCard",
+      "rule": "The single life.",
+      "image": "basicUnicorn03.png",
+      "copiesInDeck": 3,
+      "effects": [],
+      "tags": [ "basic_unicorn", "no_effect", "flavor" ]
+    },
+    {
+      "id": "C017",
+      "name": "Stoner Unicorn",
+      "type": "BasicUnicornCard",
+      "rule": "It's#. 4:20 somewhere.",
+      "image": "basicUnicorn04.png",
+      "copiesInDeck": 3,
+      "effects": [],
+      "tags": [ "basic_unicorn", "no_effect", "flavor" ]
+    },
+    {
+      "id": "C018",
+      "name": "Unicorn on the Street Corner",
+      "type": "BasicUnicornCard",
+      "rule": "I'm expensive, but I'm worth it.",
+      "image": "basicUnicorn05.png",
+      "copiesInDeck": 3,
+      "effects": [],
+      "tags": [ "basic_unicorn", "no_effect", "flavor" ]
+    },
+    {
+      "id": "C019",
+      "name": "Vanillacorn",
+      "type": "BasicUnicornCard",
+      "rule": "My body is ready!",
+      "image": "basicUnicorn06.png",
+      "copiesInDeck": 3,
+      "effects": [],
+      "tags": [ "basic_unicorn", "no_effect", "flavor" ]
+    },
+    {
+      "id": "C020",
+      "name": "Wasted White Unicorn",
+      "type": "BasicUnicornCard",
+      "rule": "#livingfortheweekend",
+      "image": "basicUnicorn07.png",
+      "copiesInDeck": 3,
+      "effects": [],
+      "tags": [ "basic_unicorn", "no_effect", "flavor" ]
+    },
+
+    {
+      "id": "C021",
+      "name": "Bear Daddy Unicorn",
+      "type": "MagicalUnicornCard",
+      "rule": "When this card enters your Stable, you may search the deck for a \"Twinkicorn\" card and add it to your hand, then shuffle the deck.",
+      "image": "magicalUnicorn01.png",
+      "copiesInDeck": 1,
+      "effects": [
+        {
+          "kind": "SEARCH_DECK",
+          "timing": "ON_ENTER_STABLE",
+          "optional": true,
+          "criteria": { "cardName": "Twinkicorn" },
+          "result": {
+            "action": "ADD_TO_HAND",
+            "shuffleDeckAfter": true
+          }
+        }
+      ],
+      "tags": [ "magical_unicorn", "search", "tutor" ]
+    },
+    {
+      "id": "C022",
+      "name": "Bukkakecorn",
+      "type": "MagicalUnicornCard",
+      "rule": "If this card is in your Stable at the beginning of your turn, you may DISCARD 3 cards, then STEAL a Unicorn card.",
+      "image": "magicalUnicorn02.png",
+      "copiesInDeck": 1,
+      "effects": [
+        {
+          "kind": "STEAL_WITH_DISCARD_COST",
+          "timing": "START_OF_YOUR_TURN",
+          "optional": true,
+          "condition": { "selfLocation": "STABLE" },
+          "cost": {
+            "action": "DISCARD",
+            "amount": 3,
+            "from": "YOUR_HAND"
+          },
+          "criteria": {
+            "cardType": "UNICORN",
+            "fromZone": "OTHER_PLAYER_STABLE"
+          },
+          "result": { "toZone": "YOUR_STABLE" }
+        }
+      ],
+      "tags": [ "magical_unicorn", "steal", "discard_cost" ]
+    },
+    {
+      "id": "C023",
+      "name": "Cult Leader Unicorn",
+      "type": "MagicalUnicornCard",
+      "rule": "When this card enters your Stable, each player (including you) must SACRIFICE a Unicorn card.",
+      "image": "magicalUnicorn03.png",
+      "copiesInDeck": 1,
+      "effects": [
+        {
+          "kind": "EACH_PLAYER_SACRIFICE",
+          "timing": "ON_ENTER_STABLE",
+          "criteria": {
+            "cardType": "UNICORN",
+            "fromZone": "STABLE"
+          },
+          "result": { "amount": 1 }
+        }
+      ],
+      "tags": [ "magical_unicorn", "sacrifice", "each_player" ]
+    },
+    {
+      "id": "C024",
+      "name": "Double Agent Unicorn",
+      "type": "MagicalUnicornCard",
+      "rule": "If this card is in your Stable at the beginning of your turn, you may SACRIFICE a Basic Unicorn card, then pull a card at random from each other player's hand.",
+      "image": "magicalUnicorn04.png",
+      "copiesInDeck": 1,
+      "effects": [
+        {
+          "kind": "EACH_OTHER_PLAYER_RANDOM_PULL_WITH_SACRIFICE_COST",
+          "timing": "START_OF_YOUR_TURN",
+          "optional": true,
+          "condition": { "selfLocation": "STABLE" },
+          "cost": {
+            "action": "SACRIFICE",
+            "criteria": {
+              "cardType": "BASIC_UNICORN",
+              "fromZone": "YOUR_STABLE"
+            },
+            "amount": 1
+          },
+          "result": {
+            "action": "PULL_RANDOM_FROM_HAND",
+            "from": "EACH_OTHER_PLAYER",
+            "toZone": "YOUR_HAND",
+            "amountEach": 1
+          }
+        }
+      ],
+      "tags": [ "magical_unicorn", "sacrifice_cost", "steal_hand", "each_other_player" ]
+    },
+    {
+      "id": "C025",
+      "name": "Dumpster Diving Unicorn",
+      "type": "MagicalUnicornCard",
+      "rule": "When this card enters your Stable, you may add a card from the discard pile to your hand.",
+      "image": "magicalUnicorn05.png",
+      "copiesInDeck": 1,
+      "effects": [
+        {
+          "kind": "RECOVER_FROM_DISCARD",
+          "timing": "ON_ENTER_STABLE",
+          "optional": true,
+          "criteria": {
+            "fromZone": "DISCARD",
+            "cards": "ANY"
+          },
+          "result": { "action": "ADD_TO_HAND" }
+        }
+      ],
+      "tags": [ "magical_unicorn", "recursion", "discard" ]
+    },
+    {
+      "id": "C026",
+      "name": "Entitled Unicorn",
+      "type": "MagicalUnicornCard",
+      "rule": "When this card enters your Stable, you may look at another player's hand. Choose a Unicorn card and add it to your hand.",
+      "image": "magicalUnicorn06.png",
+      "copiesInDeck": 1,
+      "effects": [
+        {
+          "kind": "LOOK_AND_STEAL_FROM_HAND",
+          "timing": "ON_ENTER_STABLE",
+          "optional": true,
+          "criteria": {
+            "by": "CHOSEN_OTHER_PLAYER",
+            "fromZone": "HAND",
+            "cardType": "UNICORN"
+          },
+          "result": { "action": "ADD_TO_HAND" }
+        }
+      ],
+      "tags": [ "magical_unicorn", "peek", "steal_hand" ]
+    },
+    {
+      "id": "C027",
+      "name": "Eunuchorn",
+      "type": "MagicalUnicornCard",
+      "rule": "Baby Unicorn cards cannot enter any player's Stable.",
+      "image": "magicalUnicorn07.png",
+      "copiesInDeck": 1,
+      "effects": [
+        {
+          "kind": "RESTRICT_ZONE_ENTRY",
+          "timing": "STATIC",
+          "restriction": {
+            "cardType": "BABY_UNICORN",
+            "forbiddenZone": "STABLE",
+            "appliesTo": "ALL_PLAYERS"
+          }
+        }
+      ],
+      "tags": [ "magical_unicorn", "lockdown", "baby_hate" ]
+    },
+    {
+      "id": "C028",
+      "name": "Flesh-Eating Unicorn",
+      "type": "MagicalUnicornCard",
+      "rule": "When this card enters your Stable, you may force another player to DISCARD 2 cards.",
+      "image": "magicalUnicorn08.png",
+      "copiesInDeck": 1,
+      "effects": [
+        {
+          "kind": "FORCE_DISCARD",
+          "timing": "ON_ENTER_STABLE",
+          "optional": true,
+          "target": "CHOSEN_OTHER_PLAYER",
+          "amount": 2
+        }
+      ],
+      "tags": [ "magical_unicorn", "discard", "control" ]
+    },
+    {
+      "id": "C029",
+      "name": "Free Candy Unicorn",
+      "type": "MagicalUnicornCard",
+      "rule": "When this card enters your Stable, STEAL a Baby Unicorn card. If this card leaves your Stable, return that Baby Unicorn card to the Stable from which you stole it.",
+      "image": "magicalUnicorn09.png",
+      "copiesInDeck": 1,
+      "effects": [
+        {
+          "kind": "STEAL_CARD",
+          "timing": "ON_ENTER_STABLE",
+          "criteria": {
+            "cardType": "BABY_UNICORN",
+            "fromZone": "NURSERY"
+          },
+          "result": {
+            "toZone": "YOUR_STABLE",
+            "linkToSource": true
+          }
+        },
+        {
+          "kind": "RETURN_LINKED_CARD_ON_LEAVE",
+          "timing": "ON_LEAVE_STABLE",
+          "criteria": { "linkedCardType": "BABY_UNICORN" },
+          "result": { "returnTo": "ORIGINAL_STABLE" }
+        }
+      ],
+      "tags": [ "magical_unicorn", "steal", "baby_unicorn", "linked_return" ]
+    },
+    {
+      "id": "C030",
+      "name": "Giant Horned Cock",
+      "type": "MagicalUnicornCard",
+      "rule": "This card counts for 2 Unicorns. You cannot play Magic cards.",
+      "image": "magicalUnicorn10.png",
+      "copiesInDeck": 1,
+      "effects": [
+        {
+          "kind": "COUNT_AS_MULTIPLE_UNICORNS",
+          "timing": "STATIC",
+          "amount": 2
+        },
+        {
+          "kind": "RESTRICT_PLAY",
+          "timing": "STATIC",
+          "restriction": {
+            "forbiddenTypes": [ "MagicCard" ],
+            "appliesTo": "YOU"
+          }
+        }
+      ],
+      "tags": [ "magical_unicorn", "double", "restriction" ]
+    },
+    {
+      "id": "C031",
+      "name": "Hentaicorn",
+      "type": "MagicalUnicornCard",
+      "rule": "if a Unicorn card in your Stable would be destroyed, you may SACRIFICE this card instead.",
+      "image": "magicalUnicorn11.png",
+      "copiesInDeck": 1,
+      "effects": [
+        {
+          "kind": "REPLACE_EVENT_WITH_COST",
+          "timing": "STATIC",
+          "optional": true,
+          "when": {
+            "events": [ "DESTROY" ],
+            "target": "YOUR_UNICORN_IN_STABLE"
+          },
+          "cost": {
+            "action": "SACRIFICE",
+            "target": "SELF"
+          },
+          "replaceWith": { "preventOriginal": true }
+        }
+      ],
+      "tags": [ "magical_unicorn", "protection", "replacement" ]
+    },
+    {
+      "id": "C032",
+      "name": "Homicidal Psychocorn",
+      "type": "MagicalUnicornCard",
+      "rule": "If this card is in your Stable at the beginning of your turn, you may DISCARD your hand, then DESTROY a Unicorn card.",
+      "image": "magicalUnicorn12.png",
+      "copiesInDeck": 1,
+      "effects": [
+        {
+          "kind": "DESTROY_WITH_DISCARD_HAND_COST",
+          "timing": "START_OF_YOUR_TURN",
+          "optional": true,
+          "condition": { "selfLocation": "STABLE" },
+          "cost": { "action": "DISCARD_HAND" },
+          "criteria": {
+            "cardType": "UNICORN",
+            "fromZone": "ANY_STABLE"
+          },
+          "result": { "action": "DESTROY" }
+        }
+      ],
+      "tags": [ "magical_unicorn", "destroy", "discard_hand", "control" ]
+    },
+    {
+      "id": "C033",
+      "name": "Horny Flying Unicorn",
+      "type": "MagicalUnicornCard",
+      "rule": "When this card enters your Stable, you may add a Neigh card from the discard pile to your hand. If this card is sacrificed or destroyed, return it to your hand.",
+      "image": "magicalUnicorn13.png",
+      "copiesInDeck": 1,
+      "effects": [
+        {
+          "kind": "RECOVER_FROM_DISCARD",
+          "timing": "ON_ENTER_STABLE",
+          "optional": true,
+          "criteria": {
+            "fromZone": "DISCARD",
+            "cardType": "NEIGH"
+          },
+          "result": { "action": "ADD_TO_HAND" }
+        },
+        {
+          "kind": "RETURN_TO_HAND_ON_EVENTS",
+          "timing": "STATIC",
+          "when": {
+            "events": [ "SACRIFICE", "DESTROY" ],
+            "target": "SELF"
+          },
+          "replaceWith": { "moveTo": "YOUR_HAND" }
+        }
+      ],
+      "tags": [ "magical_unicorn", "recursion", "neigh", "protection" ]
+    },
+    {
+      "id": "C034",
+      "name": "Kittencorn in Heat",
+      "type": "MagicalUnicornCard",
+      "rule": "When this card enters your Stable, you may bring a Baby Unicorn card from the Nursery into your Stable.",
+      "image": "magicalUnicorn14.png",
+      "copiesInDeck": 1,
+      "effects": [
+        {
+          "kind": "MOVE_CARD",
+          "timing": "ON_ENTER_STABLE",
+          "optional": true,
+          "criteria": {
+            "cardType": "BABY_UNICORN",
+            "fromZone": "NURSERY"
+          },
+          "result": { "toZone": "YOUR_STABLE" }
+        }
+      ],
+      "tags": [ "magical_unicorn", "baby_unicorn", "summon" ]
+    },
+    {
+      "id": "C035",
+      "name": "Manscaped Llamacorn",
+      "type": "MagicalUnicornCard",
+      "rule": "When this card enters your Stable, each other player must DISCARD a card.",
+      "image": "magicalUnicorn15.png",
+      "copiesInDeck": 1,
+      "effects": [
+        {
+          "kind": "EACH_OTHER_PLAYER_DISCARD",
+          "timing": "ON_ENTER_STABLE",
+          "amountEach": 1
+        }
+      ],
+      "tags": [ "magical_unicorn", "discard", "each_other_player" ]
+    },
+    {
+      "id": "C036",
+      "name": "Moist Unicorn",
+      "type": "MagicalUnicornCard",
+      "rule": "When this card enters your Stable, you may search the deck for a Unicorn card and add it to your hand, then Shuffle the deck.",
+      "image": "magicalUnicorn16.png",
+      "copiesInDeck": 1,
+      "effects": [
+        {
+          "kind": "SEARCH_DECK",
+          "timing": "ON_ENTER_STABLE",
+          "optional": true,
+          "criteria": { "cardType": "UNICORN" },
+          "result": {
+            "action": "ADD_TO_HAND",
+            "shuffleDeckAfter": true
+          }
+        }
+      ],
+      "tags": [ "magical_unicorn", "search", "tutor" ]
+    },
+    {
+      "id": "C037",
+      "name": "Mother Fuckin' Flying Unicorn",
+      "type": "MagicalUnicornCard",
+      "rule": "When this card enters your Stable, you may force another player to DISCARD a card. If this card is sacrificed or destroyed, return it to your hand.",
+      "image": "magicalUnicorn17.png",
+      "copiesInDeck": 1,
+      "effects": [
+        {
+          "kind": "FORCE_DISCARD",
+          "timing": "ON_ENTER_STABLE",
+          "optional": true,
+          "target": "CHOSEN_OTHER_PLAYER",
+          "amount": 1
+        },
+        {
+          "kind": "RETURN_TO_HAND_ON_EVENTS",
+          "timing": "STATIC",
+          "when": {
+            "events": [ "SACRIFICE", "DESTROY" ],
+            "target": "SELF"
+          },
+          "replaceWith": { "moveTo": "YOUR_HAND" }
+        }
+      ],
+      "tags": [ "magical_unicorn", "discard", "protection", "recursion" ]
+    },
+    {
+      "id": "C038",
+      "name": "Naked Narwhal",
+      "type": "MagicalUnicornCard",
+      "rule": "When this card enters your Stable, STEAL a Basic Unicorn card. If this card leaves your Stable, return that Basic Unicorn card to the Stable from which you stole it.",
+      "image": "magicalUnicorn18.png",
+      "copiesInDeck": 1,
+      "effects": [
+        {
+          "kind": "STEAL_CARD",
+          "timing": "ON_ENTER_STABLE",
+          "criteria": {
+            "cardType": "BASIC_UNICORN",
+            "fromZone": "OTHER_PLAYER_STABLE"
+          },
+          "result": {
+            "toZone": "YOUR_STABLE",
+            "linkToSource": true
+          }
+        },
+        {
+          "kind": "RETURN_LINKED_CARD_ON_LEAVE",
+          "timing": "ON_LEAVE_STABLE",
+          "criteria": { "linkedCardType": "BASIC_UNICORN" },
+          "result": { "returnTo": "ORIGINAL_STABLE" }
+        }
+      ],
+      "tags": [ "magical_unicorn", "steal", "linked_return" ]
+    },
+    {
+      "id": "C039",
+      "name": "Officer Hornie",
+      "type": "MagicalUnicornCard",
+      "rule": "When this card enters your Stable, you may look at another player's hand. Choose a Unicorn card and move it to the discard pile.",
+      "image": "magicalUnicorn19.png",
+      "copiesInDeck": 1,
+      "effects": [
+        {
+          "kind": "LOOK_AND_DISCARD_FROM_HAND",
+          "timing": "ON_ENTER_STABLE",
+          "optional": true,
+          "criteria": {
+            "by": "CHOSEN_OTHER_PLAYER",
+            "fromZone": "HAND",
+            "cardType": "UNICORN"
+          },
+          "result": { "moveTo": "DISCARD" }
+        }
+      ],
+      "tags": [ "magical_unicorn", "peek", "discard", "control" ]
+    },
+    {
+      "id": "C040",
+      "name": "Polyamorous Unicorn",
+      "type": "MagicalUnicornCard",
+      "rule": "If this card is in your Stable at the beginning of your turn, you may move this card to another player's Stable, then STEAL a Unicorn card from that player's Stable.",
+      "image": "magicalUnicorn20.png",
+      "copiesInDeck": 1,
+      "effects": [
+        {
+          "kind": "MOVE_SELF_THEN_STEAL",
+          "timing": "START_OF_YOUR_TURN",
+          "optional": true,
+          "condition": { "selfLocation": "STABLE" },
+          "result": {
+            "moveSelfTo": "CHOSEN_OTHER_PLAYER_STABLE",
+            "steal": {
+              "cardType": "UNICORN",
+              "fromZone": "THAT_PLAYER_STABLE",
+              "toZone": "YOUR_STABLE"
+            }
+          }
+        }
+      ],
+      "tags": [ "magical_unicorn", "move", "steal" ]
+    },
+    {
+      "id": "C041",
+      "name": "Sadomasocorn",
+      "type": "MagicalUnicornCard",
+      "rule": "If this card is in your Stable at the beginning of your turn, you may SACRIFICE a card, then DESTROY a Unicorn card.",
+      "image": "magicalUnicorn21.png",
+      "copiesInDeck": 1,
+      "effects": [
+        {
+          "kind": "DESTROY_WITH_SACRIFICE_COST",
+          "timing": "START_OF_YOUR_TURN",
+          "optional": true,
+          "condition": { "selfLocation": "STABLE" },
+          "cost": {
+            "action": "SACRIFICE",
+            "criteria": {
+              "cards": "ANY",
+              "fromZone": "YOUR_STABLE_OR_HAND"
+            },
+            "amount": 1
+          },
+          "criteria": {
+            "cardType": "UNICORN",
+            "fromZone": "ANY_STABLE"
+          },
+          "result": { "action": "DESTROY" }
+        }
+      ],
+      "tags": [ "magical_unicorn", "destroy", "sacrifice_cost" ]
+    },
+    {
+      "id": "C042",
+      "name": "Semenbiscuit",
+      "type": "MagicalUnicornCard",
+      "rule": "When this card enters your Stable, SACRIFICE all Downgrade cards in your Stable.",
+      "image": "magicalUnicorn22.png",
+      "copiesInDeck": 1,
+      "effects": [
+        {
+          "kind": "SACRIFICE_ALL",
+          "timing": "ON_ENTER_STABLE",
+          "criteria": {
+            "cardType": "DOWNGRADE",
+            "fromZone": "YOUR_STABLE"
+          }
+        }
+      ],
+      "tags": [ "magical_unicorn", "cleanup", "downgrade_hate" ]
+    },
+    {
+      "id": "C043",
+      "name": "Sextra-Terrestrial Unicorn",
+      "type": "MagicalUnicornCard",
+      "rule": "When this card enters your Stable, you may return a card in another player's Stable to their hand.",
+      "image": "magicalUnicorn23.png",
+      "copiesInDeck": 1,
+      "effects": [
+        {
+          "kind": "BOUNCE_CARD",
+          "timing": "ON_ENTER_STABLE",
+          "optional": true,
+          "criteria": {
+            "fromZone": "OTHER_PLAYER_STABLE",
+            "cards": "ANY"
+          },
+          "result": { "moveTo": "OWNER_HAND" }
+        }
+      ],
+      "tags": [ "magical_unicorn", "bounce", "control" ]
+    },
+    {
+      "id": "C044",
+      "name": "Straight But Curious Unicorn",
+      "type": "MagicalUnicornCard",
+      "rule": "When this card enters your Stable, you may look at the top 3 cards in the deck, then return them to the top of the deck in the same order.",
+      "image": "magicalUnicorn24.png",
+      "copiesInDeck": 1,
+      "effects": [
+        {
+          "kind": "SCRY",
+          "timing": "ON_ENTER_STABLE",
+          "optional": true,
+          "amount": 3,
+          "result": {
+            "reorder": false,
+            "returnToTopSameOrder": true
+          }
+        }
+      ],
+      "tags": [ "magical_unicorn", "scry", "setup" ]
+    },
+    {
+      "id": "C045",
+      "name": "The Bitchiest Unicorn",
+      "type": "MagicalUnicornCard",
+      "rule": "You can only play this card if there is a Basic Unicorn card in your Stable. If this card is in your Stable at the beginning of your turn, you may force another player to DISCARD a card.",
+      "image": "magicalUnicorn25.png",
+      "copiesInDeck": 1,
+      "effects": [
+        {
+          "kind": "PLAY_REQUIREMENT",
+          "timing": "STATIC",
+          "requirement": {
+            "yourStableHas": {
+              "cardType": "BASIC_UNICORN",
+              "amountAtLeast": 1
+            }
+          }
+        },
+        {
+          "kind": "FORCE_DISCARD",
+          "timing": "START_OF_YOUR_TURN",
+          "optional": true,
+          "condition": { "selfLocation": "STABLE" },
+          "target": "CHOSEN_OTHER_PLAYER",
+          "amount": 1
+        }
+      ],
+      "tags": [ "magical_unicorn", "requirement", "discard", "control" ]
+    },
+    {
+      "id": "C046",
+      "name": "Total Stud Unicorn",
+      "type": "MagicalUnicornCard",
+      "rule": "This card counts for 2 Unicorns. You cannot play Basic Unicorn cards.",
+      "image": "magicalUnicorn26.png",
+      "copiesInDeck": 1,
+      "effects": [
+        {
+          "kind": "COUNT_AS_MULTIPLE_UNICORNS",
+          "timing": "STATIC",
+          "amount": 2
+        },
+        {
+          "kind": "RESTRICT_PLAY",
+          "timing": "STATIC",
+          "restriction": {
+            "forbiddenTypes": [ "BasicUnicornCard" ],
+            "appliesTo": "YOU"
+          }
+        }
+      ],
+      "tags": [ "magical_unicorn", "double", "restriction" ]
+    },
+    {
+      "id": "C047",
+      "name": "Twinkicorn",
+      "type": "MagicalUnicornCard",
+      "rule": "When this card enters your Stable, you may search the deck for a \"Bear Daddy Unicorn\" card and add it to your hand, then shuffle the deck.",
+      "image": "magicalUnicorn27.png",
+      "copiesInDeck": 1,
+      "effects": [
+        {
+          "kind": "SEARCH_DECK",
+          "timing": "ON_ENTER_STABLE",
+          "optional": true,
+          "criteria": { "cardName": "Bear Daddy Unicorn" },
+          "result": {
+            "action": "ADD_TO_HAND",
+            "shuffleDeckAfter": true
+          }
+        }
+      ],
+      "tags": [ "magical_unicorn", "search", "tutor" ]
+    },
+    {
+      "id": "C048",
+      "name": "Uncut Unicorn",
+      "type": "MagicalUnicornCard",
+      "rule": "Your hand limit is increased by 1 card.",
+      "image": "magicalUnicorn28.png",
+      "copiesInDeck": 1,
+      "effects": [
+        {
+          "kind": "HAND_LIMIT_MOD",
+          "timing": "STATIC",
+          "amount": 1,
+          "appliesTo": "YOU"
+        }
+      ],
+      "tags": [ "magical_unicorn", "hand_limit", "buff" ]
+    },
+    {
+      "id": "C049",
+      "name": "Unexpected Miracle Unicorn",
+      "type": "MagicalUnicornCard",
+      "rule": "When this card enters your Stable, you may DISCARD a card, then Bring a Baby Unicorn card from the Nursery into your Stable.",
+      "image": "magicalUnicorn29.png",
+      "copiesInDeck": 1,
+      "effects": [
+        {
+          "kind": "MOVE_CARD_WITH_DISCARD_COST",
+          "timing": "ON_ENTER_STABLE",
+          "optional": true,
+          "cost": {
+            "action": "DISCARD",
+            "amount": 1,
+            "from": "YOUR_HAND"
+          },
+          "criteria": {
+            "cardType": "BABY_UNICORN",
+            "fromZone": "NURSERY"
+          },
+          "result": { "toZone": "YOUR_STABLE" }
+        }
+      ],
+      "tags": [ "magical_unicorn", "discard_cost", "baby_unicorn", "summon" ]
+    },
+    {
+      "id": "C050",
+      "name": "Unicorn Cuckold",
+      "type": "MagicalUnicornCard",
+      "rule": "Each time a Unicorn card in your Stable is stolen, you may add a card from the discard pile to your hand.",
+      "image": "magicalUnicorn30.png",
+      "copiesInDeck": 1,
+      "effects": [
+        {
+          "kind": "TRIGGER_ON_EVENT",
+          "timing": "STATIC",
+          "when": {
+            "events": [ "STEAL" ],
+            "target": "YOUR_UNICORN_IN_STABLE"
+          },
+          "optional": true,
+          "result": {
+            "action": "RECOVER_FROM_DISCARD",
+            "cards": "ANY",
+            "toZone": "YOUR_HAND"
+          }
+        }
+      ],
+      "tags": [ "magical_unicorn", "recursion", "trigger" ]
+    },
+    {
+      "id": "C051",
+      "name": "Unicorn Dancer",
+      "type": "MagicalUnicornCard",
+      "rule": "If this card is in your Stable at the beginning of your turn, you may DRAW a card and DISCARD a card.",
+      "image": "magicalUnicorn31.png",
+      "copiesInDeck": 1,
+      "effects": [
+        {
+          "kind": "DRAW_THEN_DISCARD",
+          "timing": "START_OF_YOUR_TURN",
+          "optional": true,
+          "condition": { "selfLocation": "STABLE" },
+          "draw": 1,
+          "discard": 1
+        }
+      ],
+      "tags": [ "magical_unicorn", "draw", "discard", "filter" ]
+    },
+
+    {
+      "id": "C052",
+      "name": "Baby Trap",
+      "type": "MagicCard",
+      "rule": "STEAL a Baby Unicorn card.",
+      "image": "Magic01.png",
+      "copiesInDeck": 2,
+      "effects": [
+        {
+          "kind": "STEAL_CARD",
+          "timing": "ON_PLAY",
+          "criteria": {
+            "cardType": "BABY_UNICORN",
+            "fromZone": "NURSERY"
+          },
+          "result": { "toZone": "YOUR_STABLE" }
+        }
+      ],
+      "tags": [ "magic", "steal", "baby_unicorn" ]
+    },
+    {
+      "id": "C053",
+      "name": "Blaze and Graze",
+      "type": "MagicCard",
+      "rule": "Reveal the top card in the deck. If it is a Unicorn card, bring it into your Stable. If it is anything else, add it to your hand.",
+      "image": "Magic02.png",
+      "copiesInDeck": 1,
+      "effects": [
+        {
+          "kind": "REVEAL_TOP_AND_RESOLVE",
+          "timing": "ON_PLAY",
+          "amount": 1,
+          "if": {
+            "cardType": "UNICORN",
+            "then": { "moveTo": "YOUR_STABLE" },
+            "else": { "moveTo": "YOUR_HAND" }
+          }
+        }
+      ],
+      "tags": [ "magic", "reveal", "ramp" ]
+    },
+    {
+      "id": "C054",
+      "name": "Breaking and Entering",
+      "type": "MagicCard",
+      "rule": "Pull 2 cards at random from another player's hand.",
+      "image": "Magic03.png",
+      "copiesInDeck": 2,
+      "effects": [
+        {
+          "kind": "PULL_RANDOM_FROM_HAND",
+          "timing": "ON_PLAY",
+          "target": "CHOSEN_OTHER_PLAYER",
+          "amount": 2,
+          "result": { "toZone": "YOUR_HAND" }
+        }
+      ],
+      "tags": [ "magic", "steal_hand", "random" ]
+    },
+    {
+      "id": "C055",
+      "name": "Buck Naked",
+      "type": "MagicCard",
+      "rule": "DESTROY all Upgrade cards in another player's Stable.",
+      "image": "Magic04.png",
+      "copiesInDeck": 1,
+      "effects": [
+        {
+          "kind": "DESTROY_ALL",
+          "timing": "ON_PLAY",
+          "target": "CHOSEN_OTHER_PLAYER",
+          "criteria": {
+            "cardType": "UPGRADE",
+            "fromZone": "STABLE"
+          }
+        }
+      ],
+      "tags": [ "magic", "destroy", "upgrade_hate" ]
+    },
+    {
+      "id": "C056",
+      "name": "Fuck. Marry. Kill",
+      "type": "MagicCard",
+      "rule": "Force another player to DISCARD a card, give another player a card from your hand, then DESTROY a Unicorn card.",
+      "image": "Magic05.png",
+      "copiesInDeck": 2,
+      "effects": [
+        {
+          "kind": "MULTI_STEP",
+          "timing": "ON_PLAY",
+          "steps": [
+            {
+              "action": "FORCE_DISCARD",
+              "target": "CHOSEN_OTHER_PLAYER",
+              "amount": 1
+            },
+            {
+              "action": "GIVE_CARD_FROM_HAND",
+              "target": "CHOSEN_PLAYER",
+              "amount": 1
+            },
+            {
+              "action": "DESTROY",
+              "criteria": {
+                "cardType": "UNICORN",
+                "fromZone": "ANY_STABLE"
+              },
+              "amount": 1
+            }
+          ]
+        }
+      ],
+      "tags": [ "magic", "discard", "destroy", "multi" ]
+    },
+    {
+      "id": "C057",
+      "name": "Hoof Job",
+      "type": "MagicCard",
+      "rule": "Look at another player's hand. Choose a card and add it to your hand.",
+      "image": "Magic06.png",
+      "copiesInDeck": 2,
+      "effects": [
+        {
+          "kind": "LOOK_AND_STEAL_FROM_HAND",
+          "timing": "ON_PLAY",
+          "criteria": {
+            "by": "CHOSEN_OTHER_PLAYER",
+            "fromZone": "HAND",
+            "cards": "ANY"
+          },
+          "result": { "action": "ADD_TO_HAND" }
+        }
+      ],
+      "tags": [ "magic", "peek", "steal_hand" ]
+    },
+    {
+      "id": "C058",
+      "name": "Horrifying Impaling",
+      "type": "MagicCard",
+      "rule": "DESTROY a Unicorn card. Each player (including you) must DISCARD a card.",
+      "image": "Magic07.png",
+      "copiesInDeck": 2,
+      "effects": [
+        {
+          "kind": "DESTROY",
+          "timing": "ON_PLAY",
+          "criteria": {
+            "cardType": "UNICORN",
+            "fromZone": "ANY_STABLE"
+          },
+          "amount": 1
+        },
+        {
+          "kind": "EACH_PLAYER_DISCARD",
+          "timing": "ON_PLAY",
+          "amountEach": 1
+        }
+      ],
+      "tags": [ "magic", "destroy", "discard", "each_player" ]
+    },
+    {
+      "id": "C059",
+      "name": "Kink Shame",
+      "type": "MagicCard",
+      "rule": "DESTROY an Upgrade card or SACRIFICE a Downgrade card.",
+      "image": "Magic08.png",
+      "copiesInDeck": 3,
+      "effects": [
+        {
+          "kind": "CHOOSE_ONE",
+          "timing": "ON_PLAY",
+          "options": [
+            {
+              "action": "DESTROY",
+              "criteria": {
+                "cardType": "UPGRADE",
+                "fromZone": "ANY_STABLE"
+              },
+              "amount": 1
+            },
+            {
+              "action": "SACRIFICE",
+              "criteria": {
+                "cardType": "DOWNGRADE",
+                "fromZone": "ANY_STABLE"
+              },
+              "amount": 1
+            }
+          ]
+        }
+      ],
+      "tags": [ "magic", "destroy", "sacrifice", "utility" ]
+    },
+    {
+      "id": "C060",
+      "name": "Make it Rain",
+      "type": "MagicCard",
+      "rule": "DISCARD 2 cards, then DRAW 2 cards and take another turn.",
+      "image": "Magic9.png",
+      "copiesInDeck": 1,
+      "effects": [
+        {
+          "kind": "EXTRA_TURN_WITH_DISCARD_COST",
+          "timing": "ON_PLAY",
+          "cost": {
+            "action": "DISCARD",
+            "amount": 2,
+            "from": "YOUR_HAND"
+          },
+          "result": {
+            "draw": 2,
+            "extraTurn": true
+          }
+        }
+      ],
+      "tags": [ "magic", "discard_cost", "draw", "extra_turn" ]
+    },
+    {
+      "id": "C061",
+      "name": "Make It Snow",
+      "type": "MagicCard",
+      "rule": "DISCARD your hand, then DRAW 3 cards and take another turn.",
+      "image": "Magic10.png",
+      "copiesInDeck": 1,
+      "effects": [
+        {
+          "kind": "EXTRA_TURN_WITH_DISCARD_HAND_COST",
+          "timing": "ON_PLAY",
+          "cost": { "action": "DISCARD_HAND" },
+          "result": {
+            "draw": 3,
+            "extraTurn": true
+          }
+        }
+      ],
+      "tags": [ "magic", "discard_hand", "draw", "extra_turn" ]
+    },
+    {
+      "id": "C062",
+      "name": "Rainbow Shitstorm",
+      "type": "MagicCard",
+      "rule": "Each player (including you) must SACRIFICE a card and DISCARD their hand. Shuffle the discard pile into the deck, then deal 5 cards to each player.",
+      "image": "Magic11.png",
+      "copiesInDeck": 1,
+      "effects": [
+        {
+          "kind": "RESET_GAMESTATE",
+          "timing": "ON_PLAY",
+          "steps": [
+            {
+              "action": "EACH_PLAYER_SACRIFICE",
+              "amountEach": 1
+            },
+            { "action": "EACH_PLAYER_DISCARD_HAND" },
+            { "action": "SHUFFLE_DISCARD_INTO_DECK" },
+            {
+              "action": "EACH_PLAYER_DRAW",
+              "amountEach": 5
+            }
+          ]
+        }
+      ],
+      "tags": [ "magic", "wipe", "reset", "each_player" ]
+    },
+    {
+      "id": "C063",
+      "name": "Safe Sex",
+      "type": "MagicCard",
+      "rule": "Each player (including you) must return a Baby Unicorn card from their Stable to the Nursery.",
+      "image": "Magic12.png",
+      "copiesInDeck": 1,
+      "effects": [
+        {
+          "kind": "EACH_PLAYER_MOVE",
+          "timing": "ON_PLAY",
+          "criteria": {
+            "cardType": "BABY_UNICORN",
+            "fromZone": "STABLE"
+          },
+          "result": {
+            "moveTo": "NURSERY",
+            "amountEach": 1
+          }
+        }
+      ],
+      "tags": [ "magic", "baby_unicorn", "bounce", "each_player" ]
+    },
+    {
+      "id": "C064",
+      "name": "Sex, Drugs, and Unicorns",
+      "type": "MagicCard",
+      "rule": "Choose a player. That player must either DISCARD 3 cards or SACRIFICE a Unicorn card.",
+      "image": "Magic13.png",
+      "copiesInDeck": 1,
+      "effects": [
+        {
+          "kind": "TARGET_CHOOSE_ONE",
+          "timing": "ON_PLAY",
+          "target": "CHOSEN_PLAYER",
+          "options": [
+            {
+              "action": "DISCARD",
+              "amount": 3,
+              "from": "TARGET_HAND"
+            },
+            {
+              "action": "SACRIFICE",
+              "criteria": {
+                "cardType": "UNICORN",
+                "fromZone": "TARGET_STABLE"
+              },
+              "amount": 1
+            }
+          ]
+        }
+      ],
+      "tags": [ "magic", "discard", "sacrifice", "control" ]
+    },
+    {
+      "id": "C065",
+      "name": "Unicorn Acid Trip",
+      "type": "MagicCard",
+      "rule": "Each player (including you) must DISCARD their hand and DRAW the same number of cards they discarded. You may DRAW an additional 2 cards.",
+      "image": "Magic14.png",
+      "copiesInDeck": 1,
+      "effects": [
+        {
+          "kind": "WHEEL_PLUS",
+          "timing": "ON_PLAY",
+          "eachPlayer": {
+            "discardHand": true,
+            "drawSameAsDiscarded": true
+          },
+          "youAdditionalDraw": 2
+        }
+      ],
+      "tags": [ "magic", "wheel", "draw", "each_player" ]
+    },
+    {
+      "id": "C066",
+      "name": "Unicorn Enema",
+      "type": "MagicCard",
+      "rule": "SACRIFICE all Downgrade cards in your Stable.",
+      "image": "Magic15.png",
+      "copiesInDeck": 1,
+      "effects": [
+        {
+          "kind": "SACRIFICE_ALL",
+          "timing": "ON_PLAY",
+          "criteria": {
+            "cardType": "DOWNGRADE",
+            "fromZone": "YOUR_STABLE"
+          }
+        }
+      ],
+      "tags": [ "magic", "cleanup", "downgrade_hate" ]
+    },
+    {
+      "id": "C067",
+      "name": "Unicorn Hangover",
+      "type": "MagicCard",
+      "rule": "Force another player to skip their next turn.",
+      "image": "Magic16.png",
+      "copiesInDeck": 1,
+      "effects": [
+        {
+          "kind": "SKIP_NEXT_TURN",
+          "timing": "ON_PLAY",
+          "target": "CHOSEN_OTHER_PLAYER"
+        }
+      ],
+      "tags": [ "magic", "skip_turn", "control" ]
+    },
+    {
+      "id": "C068",
+      "name": "Unicorgy",
+      "type": "MagicCard",
+      "rule": "DRAW a number of cards equal to the number of Basic Unicorn cards in your Stable.",
+      "image": "Magic17.png",
+      "copiesInDeck": 2,
+      "effects": [
+        {
+          "kind": "DRAW_EQUAL_TO_COUNT",
+          "timing": "ON_PLAY",
+          "countWhat": {
+            "cardType": "BASIC_UNICORN",
+            "zone": "YOUR_STABLE"
+          }
+        }
+      ],
+      "tags": [ "magic", "draw", "scaling" ]
+    },
+
+    {
+      "id": "C069",
+      "name": "Hell Neigh!",
+      "type": "InstantCard",
+      "rule": "Play this card when another player tries to play a card. Stop their player's card from being played and send it to the discard pile.",
+      "image": "Instant01.png",
+      "copiesInDeck": 3,
+      "effects": [
+        {
+          "kind": "COUNTER_PLAY",
+          "timing": "ON_OTHER_PLAYER_ATTEMPT_PLAY",
+          "optional": true,
+          "criteria": {
+            "cards": "ANY",
+            "by": "OTHER_PLAYER"
+          },
+          "result": {
+            "preventPlay": true,
+            "movePlayedCardTo": "DISCARD"
+          }
+        }
+      ],
+      "tags": [ "instant", "reaction", "counter" ]
+    },
+    {
+      "id": "C070",
+      "name": "Neigh, Bitch!",
+      "type": "InstantCard",
+      "rule": "Play this card when another player tries to play a card. Stop their player's card from being played and send it to the discard pile.",
+      "image": "Instant02.png",
+      "copiesInDeck": 3,
+      "effects": [
+        {
+          "kind": "COUNTER_PLAY",
+          "timing": "ON_OTHER_PLAYER_ATTEMPT_PLAY",
+          "optional": true,
+          "criteria": {
+            "cards": "ANY",
+            "by": "OTHER_PLAYER"
+          },
+          "result": {
+            "preventPlay": true,
+            "movePlayedCardTo": "DISCARD"
+          }
+        }
+      ],
+      "tags": [ "instant", "reaction", "counter" ]
+    },
+    {
+      "id": "C071",
+      "name": "Neigh, Motherfucker!",
+      "type": "InstantCard",
+      "rule": "Play this card when another player tries to play a card. Stop their player's card from being played and send it to the discard pile. That player must DISCARD a card.",
+      "image": "Instant03.png",
+      "copiesInDeck": 3,
+      "effects": [
+        {
+          "kind": "COUNTER_PLAY_PLUS",
+          "timing": "ON_OTHER_PLAYER_ATTEMPT_PLAY",
+          "optional": true,
+          "criteria": {
+            "cards": "ANY",
+            "by": "OTHER_PLAYER"
+          },
+          "result": {
+            "preventPlay": true,
+            "movePlayedCardTo": "DISCARD",
+            "forceDiscard": {
+              "target": "THAT_PLAYER",
+              "amount": 1
+            }
+          }
+        }
+      ],
+      "tags": [ "instant", "reaction", "counter", "discard" ]
+    },
+    {
+      "id": "C072",
+      "name": "Neigh Means Neigh",
+      "type": "InstantCard",
+      "rule": "Play this card when another player tries to play a card. Stop their card from being played and send it to the discard pile. This card cannot be Neigh'd.",
+      "image": "Instant04.png",
+      "copiesInDeck": 1,
+      "effects": [
+        {
+          "kind": "COUNTER_PLAY",
+          "timing": "ON_OTHER_PLAYER_ATTEMPT_PLAY",
+          "optional": true,
+          "criteria": {
+            "cards": "ANY",
+            "by": "OTHER_PLAYER"
+          },
+          "result": {
+            "preventPlay": true,
+            "movePlayedCardTo": "DISCARD"
+          }
+        },
+        {
+          "kind": "CANNOT_BE_COUNTERED",
+          "timing": "STATIC",
+          "byCardType": "NEIGH"
+        }
+      ],
+      "tags": [ "instant", "reaction", "counter", "uncounterable" ]
+    },
+    {
+      "id": "C073",
+      "name": "The Safeword is Neigh",
+      "type": "InstantCard",
+      "rule": "Play this card when another player tries to play a card. Stop their card from being played and send it to the discard pile.",
+      "image": "Instant05.png",
+      "copiesInDeck": 5,
+      "effects": [
+        {
+          "kind": "COUNTER_PLAY",
+          "timing": "ON_OTHER_PLAYER_ATTEMPT_PLAY",
+          "optional": true,
+          "criteria": {
+            "cards": "ANY",
+            "by": "OTHER_PLAYER"
+          },
+          "result": {
+            "preventPlay": true,
+            "movePlayedCardTo": "DISCARD"
+          }
+        }
+      ],
+      "tags": [ "instant", "reaction", "counter" ]
+    },
+
+    {
+      "id": "C074",
+      "name": "Blow Up Unicorn",
+      "type": "InstantCard",
+      "rule": "If a Unicorn card in your Stable would be sacrificed or destroyed, you may SACRIFICE this card instead.",
+      "image": "Upgrade01.png",
+      "copiesInDeck": 2,
+      "effects": [
+        {
+          "kind": "REPLACE_EVENT_WITH_COST",
+          "timing": "STATIC",
+          "optional": true,
+          "when": {
+            "events": [ "SACRIFICE", "DESTROY" ],
+            "target": "YOUR_UNICORN_IN_STABLE"
+          },
+          "cost": {
+            "action": "SACRIFICE",
+            "target": "SELF"
+          },
+          "replaceWith": { "preventOriginal": true }
+        }
+      ],
+      "tags": [ "upgrade", "protection", "replacement" ]
+    },
+    {
+      "id": "C075",
+      "name": "Dominatrix Whip",
+      "type": "UpgradeCard",
+      "rule": "If this card is in your Stable at the beginning of your turn, you may move a Unicorn card from any player's Stable to any other player's Stable. You cannot move that card to your own Stable.",
+      "image": "Upgrade02.png",
+      "copiesInDeck": 1,
+      "effects": [
+        {
+          "kind": "MOVE_UNICORN_BETWEEN_STABLES",
+          "timing": "START_OF_YOUR_TURN",
+          "optional": true,
+          "condition": { "selfLocation": "STABLE" },
+          "criteria": {
+            "cardType": "UNICORN",
+            "fromZone": "ANY_STABLE"
+          },
+          "restriction": { "cannotMoveTo": "YOUR_STABLE" },
+          "result": { "toZone": "CHOSEN_OTHER_PLAYER_STABLE" }
+        }
+      ],
+      "tags": [ "upgrade", "move", "control" ]
+    },
+    {
+      "id": "C076",
+      "name": "No Strings Attached",
+      "type": "UpgradeCard",
+      "rule": "If this card is in your Stable at the beginning of your turn, you may STEAL a Unicorn card. At the end of your turn, return that Unicorn card to the Stable from which you stole it.",
+      "image": "Upgrade03.png",
+      "copiesInDeck": 1,
+      "effects": [
+        {
+          "kind": "STEAL_CARD",
+          "timing": "START_OF_YOUR_TURN",
+          "optional": true,
+          "condition": { "selfLocation": "STABLE" },
+          "criteria": {
+            "cardType": "UNICORN",
+            "fromZone": "OTHER_PLAYER_STABLE"
+          },
+          "result": {
+            "toZone": "YOUR_STABLE",
+            "linkToSource": true,
+            "returnAtEndOfTurn": true
+          }
+        }
+      ],
+      "tags": [ "upgrade", "steal", "temporary" ]
+    },
+    {
+      "id": "C077",
+      "name": "Pony Play",
+      "type": "UpgradeCard",
+      "rule": "If this card is in your Stable at the beginning of your turn, you may pull a card at random from another player's hand. If you do, skip your Draw phase.",
+      "image": "Upgrade04.png",
+      "copiesInDeck": 2,
+      "effects": [
+        {
+          "kind": "PULL_RANDOM_AND_SKIP_DRAW",
+          "timing": "START_OF_YOUR_TURN",
+          "optional": true,
+          "condition": { "selfLocation": "STABLE" },
+          "target": "CHOSEN_OTHER_PLAYER",
+          "amount": 1,
+          "result": {
+            "toZone": "YOUR_HAND",
+            "skipPhase": "DRAW"
+          }
+        }
+      ],
+      "tags": [ "upgrade", "steal_hand", "skip_draw" ]
+    },
+    {
+      "id": "C078",
+      "name": "Putting on a Show",
+      "type": "UpgradeCard",
+      "rule": "If this card is in your Stable at the beginning of your turn, you may SACRIFICE a card, then DESTROY a card.",
+      "image": "Upgrade05.png",
+      "copiesInDeck": 2,
+      "effects": [
+        {
+          "kind": "SACRIFICE_THEN_DESTROY",
+          "timing": "START_OF_YOUR_TURN",
+          "optional": true,
+          "condition": { "selfLocation": "STABLE" },
+          "cost": {
+            "action": "SACRIFICE",
+            "criteria": {
+              "cards": "ANY",
+              "fromZone": "YOUR_STABLE_OR_HAND"
+            },
+            "amount": 1
+          },
+          "result": {
+            "action": "DESTROY",
+            "criteria": {
+              "cards": "ANY",
+              "fromZone": "ANY_STABLE"
+            },
+            "amount": 1
+          }
+        }
+      ],
+      "tags": [ "upgrade", "destroy", "sacrifice_cost" ]
+    },
+    {
+      "id": "C079",
+      "name": "Unicorn Chastity Belt",
+      "type": "UpgradeCard",
+      "rule": "Your Unicorn cards cannot be destroyed.",
+      "image": "Upgrade06.png",
+      "copiesInDeck": 1,
+      "effects": [
+        {
+          "kind": "PREVENT_EVENT",
+          "timing": "STATIC",
+          "when": {
+            "events": [ "DESTROY" ],
+            "target": "YOUR_UNICORN_IN_STABLE"
+          }
+        }
+      ],
+      "tags": [ "upgrade", "protection", "anti_destroy" ]
+    },
+    {
+      "id": "C080",
+      "name": "Unicorn Dungeon",
+      "type": "UpgradeCard",
+      "rule": "If this card is in your Stable at the beginning of your turn, you may play 2 cards during your UU Game Terminology - Action Phase.",
+      "image": "Upgrade07.png",
+      "copiesInDeck": 1,
+      "effects": [
+        {
+          "kind": "EXTRA_PLAYS",
+          "timing": "START_OF_YOUR_TURN",
+          "optional": true,
+          "condition": { "selfLocation": "STABLE" },
+          "result": {
+            "extraCardsYouMayPlayThisTurn": 1,
+            "totalPlaysThisTurn": 2
+          }
+        }
+      ],
+      "tags": [ "upgrade", "tempo", "extra_play" ]
+    },
+    {
+      "id": "C081",
+      "name": "Unicorn Speed",
+      "type": "UpgradeCard",
+      "rule": "You can only play this card if there is a Basic Unicorn card in your Stable. If this card is in your Stable at the beginning of your turn, you may DRAW a card.",
+      "image": "Upgrade08.png",
+      "copiesInDeck": 2,
+      "effects": [
+        {
+          "kind": "PLAY_REQUIREMENT",
+          "timing": "STATIC",
+          "requirement": {
+            "yourStableHas": {
+              "cardType": "BASIC_UNICORN",
+              "amountAtLeast": 1
+            }
+          }
+        },
+        {
+          "kind": "DRAW",
+          "timing": "START_OF_YOUR_TURN",
+          "optional": true,
+          "condition": { "selfLocation": "STABLE" },
+          "amount": 1
+        }
+      ],
+      "tags": [ "upgrade", "requirement", "draw" ]
+    },
+    {
+      "id": "C082",
+      "name": "Unicorn Vibrator",
+      "type": "UpgradeCard",
+      "rule": "If this card is in your Stable at the beginning of your turn, you may DRAW a card at the end of your turn.",
+      "image": "Upgrade09.png",
+      "copiesInDeck": 2,
+      "effects": [
+        {
+          "kind": "DELAYED_DRAW",
+          "timing": "START_OF_YOUR_TURN",
+          "optional": true,
+          "condition": { "selfLocation": "STABLE" },
+          "result": {
+            "drawAt": "END_OF_YOUR_TURN",
+            "amount": 1
+          }
+        }
+      ],
+      "tags": [ "upgrade", "draw", "delayed" ]
+    },
+    {
+      "id": "C083",
+      "name": "Unicorn with Benefits",
+      "type": "UpgradeCard",
+      "rule": "You can only play this card if there is a Basic Unicorn card in your Stable. If this card is in your Stable at the beginning of your turn, you may bring a Basic Unicorn card from your hand into your Stable.",
+      "image": "Upgrade10.png",
+      "copiesInDeck": 1,
+      "effects": [
+        {
+          "kind": "PLAY_REQUIREMENT",
+          "timing": "STATIC",
+          "requirement": {
+            "yourStableHas": {
+              "cardType": "BASIC_UNICORN",
+              "amountAtLeast": 1
+            }
+          }
+        },
+        {
+          "kind": "PUT_FROM_HAND_TO_STABLE",
+          "timing": "START_OF_YOUR_TURN",
+          "optional": true,
+          "condition": { "selfLocation": "STABLE" },
+          "criteria": {
+            "cardType": "BASIC_UNICORN",
+            "fromZone": "YOUR_HAND"
+          },
+          "result": { "toZone": "YOUR_STABLE" }
+        }
+      ],
+      "tags": [ "upgrade", "requirement", "cheat_into_play" ]
+    },
+
+    {
+      "id": "C084",
+      "name": "Autoerotic Asphyxiation",
+      "type": "DowngradeCard",
+      "rule": "If this card is in your Stable at the beginning of your turn, DISCARD a card.",
+      "image": "Downgrade01.png",
+      "copiesInDeck": 1,
+      "effects": [
+        {
+          "kind": "FORCE_DISCARD",
+          "timing": "START_OF_YOUR_TURN",
+          "amount": 1,
+          "condition": { "selfLocation": "STABLE" },
+          "target": "YOU"
+        }
+      ],
+      "tags": [ "downgrade", "penalty", "discard" ]
+    },
+    {
+      "id": "C085",
+      "name": "Horse Shit",
+      "type": "DowngradeCard",
+      "rule": "Unicorns in your Stable are considered Shits. Cards that affect Unicorn cards do not affect your Shits.",
+      "image": "Downgrade02.png",
+      "copiesInDeck": 1,
+      "effects": [
+        {
+          "kind": "CHANGE_TRAIT_AND_IMMUNITY",
+          "timing": "STATIC",
+          "effect": {
+            "yourUnicornsCountAs": "SHITS",
+            "unicornTargetingDoesNotAffect": "YOUR_SHITS"
+          }
+        }
+      ],
+      "tags": [ "downgrade", "weird_rules", "protection" ]
+    },
+    {
+      "id": "C086",
+      "name": "Limp Horn",
+      "type": "DowngradeCard",
+      "rule": "You cannot play Upgrade cards.",
+      "image": "Downgrade03.png",
+      "copiesInDeck": 1,
+      "effects": [
+        {
+          "kind": "RESTRICT_PLAY",
+          "timing": "STATIC",
+          "restriction": {
+            "forbiddenTypes": [ "UpgradeCard" ],
+            "appliesTo": "YOU"
+          }
+        }
+      ],
+      "tags": [ "downgrade", "restriction" ]
+    },
+    {
+      "id": "C087",
+      "name": "Mid-sex Charlie Horse",
+      "type": "DowngradeCard",
+      "rule": "Unicorn cards in your Stable are considered Basic Unicorns with no effects.",
+      "image": "Downgrade04.png",
+      "copiesInDeck": 1,
+      "effects": [
+        {
+          "kind": "NULLIFY_EFFECTS",
+          "timing": "STATIC",
+          "criteria": {
+            "cardType": "UNICORN",
+            "zone": "YOUR_STABLE"
+          },
+          "result": {
+            "treatAs": "Basic Unicorn",
+            "removeEffects": true
+          }
+        }
+      ],
+      "tags": [ "downgrade", "silence", "control" ]
+    },
+    {
+      "id": "C088",
+      "name": "Sticky Situation",
+      "type": "DowngradeCard",
+      "rule": "If this card is in your Stable at the beginning of your turn, skip either your Draw phase or your Action Phase.",
+      "image": "Downgrade05.png",
+      "copiesInDeck": 1,
+      "effects": [
+        {
+          "kind": "SKIP_PHASE_CHOICE",
+          "timing": "START_OF_YOUR_TURN",
+          "condition": { "selfLocation": "STABLE" },
+          "choices": [ "DRAW", "ACTION" ]
+        }
+      ],
+      "tags": [ "downgrade", "skip_phase", "penalty" ]
+    },
+    {
+      "id": "C089",
+      "name": "Unicorn Butt Plug",
+      "type": "DowngradeCard",
+      "rule": "Your hand limit is reduced by 4 cards.",
+      "image": "Downgrade06.png",
+      "copiesInDeck": 1,
+      "effects": [
+        {
+          "kind": "HAND_LIMIT_MOD",
+          "timing": "STATIC",
+          "amount": -4,
+          "appliesTo": "YOU"
+        }
+      ],
+      "tags": [ "downgrade", "hand_limit", "penalty" ]
+    },
+    {
+      "id": "C090",
+      "name": "Unicorn Flatulence",
+      "type": "DowngradeCard",
+      "rule": "If this card is in your Stable at the beginning of your turn, return a Unicorn card from your Stable to your hand. If at any time you have no Unicorn cards in your Stable, SACRIFICE this card.",
+      "image": "Downgrade07.png",
+      "copiesInDeck": 1,
+      "effects": [
+        {
+          "kind": "BOUNCE_OWN_UNICORN",
+          "timing": "START_OF_YOUR_TURN",
+          "condition": { "selfLocation": "STABLE" },
+          "criteria": {
+            "cardType": "UNICORN",
+            "fromZone": "YOUR_STABLE"
+          },
+          "result": {
+            "moveTo": "YOUR_HAND",
+            "amount": 1
+          }
+        },
+        {
+          "kind": "SACRIFICE_SELF_IF_CONDITION",
+          "timing": "STATIC",
+          "condition": {
+            "yourStableHas": {
+              "cardType": "UNICORN",
+              "amountAtLeast": 0
+            },
+            "sacrificeIfAmountEquals": 0
+          },
+          "result": {
+            "action": "SACRIFICE",
+            "target": "SELF"
+          }
+        }
+      ],
+      "tags": [ "downgrade", "bounce", "self_sacrifice", "penalty" ]
+    }
+  ]
+}
