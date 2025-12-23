@@ -6,8 +6,19 @@ using Server.Networking;
 
 namespace Server.Game;
 
-public class Room
+public partial class Room
 {
+    private enum TurnPhase
+    {
+        MustDraw,
+        AfterFirstDraw,
+        Discarding
+    }
+
+    private TurnPhase _phase = TurnPhase.MustDraw;
+    private bool _playedThisTurn = false;
+    private int _drawsThisTurn = 0;
+
     private readonly object _locker = new();
     private readonly List<ClientConn> _clients = new();
 
@@ -15,14 +26,20 @@ public class Room
     private int _turnCounter;
     private bool _gameStarted;
 
-    private List<CardInstance> _deck = new();
-    private Dictionary<string, List<CardInstance>> _hands = new();
+    private List<CardInstance> _mainDeck = new();
+    private List<CardInstance> _babyDeck = new();
+    private readonly List<CardInstance> _discardPile = new();
 
+    private Dictionary<string, List<CardInstance>> _hands = new();
+    private Dictionary<string, List<CardInstance>> _stalls = new();
+
+    private readonly Dictionary<string, CardDefinition> _cardById;
     private readonly CardCatalog _catalog;
 
     public Room()
     {
         _catalog = CardLoader.LoadFromFile("Assets/cards.json");
+        _cardById = _catalog.Cards.ToDictionary(c => c.Id, StringComparer.Ordinal);
     }
 
     public async Task<bool> TryJoinAsync(TcpClient tcp)
@@ -92,133 +109,92 @@ public class Room
         {
             while (true)
             {
-                var incoming = await Protocol.ReadJsonAsync(stream);
-                using var incDoc = JsonDocument.Parse(incoming);
+                JsonDocument incDoc;
+                try
+                {
+                    var incoming = await Protocol.ReadJsonAsync(stream);
+                    incDoc = JsonDocument.Parse(incoming);
+                }
+                catch
+                {
+                    break; // disconnect
+                }
 
-                var msgType = incDoc.RootElement.GetProperty("type").GetString();
-                if (msgType != "ACTION") continue;
+                using (incDoc)
+                {
+                    if (!TryGetMessageType(incDoc, out var msgType) || msgType != "ACTION")
+                        continue;
 
-                var payload = incDoc.RootElement.GetProperty("payload");
-                var action = payload.TryGetProperty("action", out var a)
-                    ? a.GetString()
-                    : null;
+                    if (!TryGetPayload(incDoc, out var payload))
+                        continue;
 
-                    // проверки
+                    if (!TryGetAction(payload, out var action))
+                    {
+                        await SendErrorAsync(stream, "Не указано действие (payload.action).");
+                        continue;
+                    }
+
                     if (!IsGameReady())
                     {
-                        await Protocol.WriteJsonAsync(stream, new
-                        {
-                            type = "ERROR",
-                            payload = new { message = "Игра ещё не началась" }
-                        });
+                        await SendErrorAsync(stream, "Игра ещё не началась");
                         continue;
                     }
 
-                    if (string.Equals(action, "GET_HAND", StringComparison.OrdinalIgnoreCase))
+                    if (action.Equals("GET_HAND", StringComparison.OrdinalIgnoreCase))
                     {
-                        object[] cards;
-                        lock (_locker)
-                        {
-                            cards = _hands[me.Player.PlayerId]
-                                .Select(ci => new { instanceId = ci.InstanceId, cardId = ci.CardId })
-                                .Cast<object>()
-                                .ToArray();
-                        }
-
-                        await Protocol.WriteJsonAsync(stream, new
-                        {
-                            type = "HAND",
-                            payload = new { cards }
-                        });
-
+                        await HandleGetHandAsync(me, stream);
                         continue;
                     }
 
-                    if (me.Player.PlayerId != _currentTurnPlayerId)
+                    if (!IsPlayersTurn(me))
                     {
-                        await Protocol.WriteJsonAsync(stream, new
-                        {
-                            type = "ERROR",
-                            payload = new { message = "Не ваш ход" }
-                        });
+                        await SendErrorAsync(stream, "Не ваш ход");
                         continue;
                     }
 
-                if (string.Equals(action, "DRAW", StringComparison.OrdinalIgnoreCase))
-                {
-                    if (_hands[me.Player.PlayerId].Count >= 7)
+                    if (action.Equals("DRAW", StringComparison.OrdinalIgnoreCase))
                     {
-                        await Protocol.WriteJsonAsync(stream, new
-                        {
-                            type = "ERROR",
-                            payload = new { message = "В руке максимум 7 карт" }
-                        });
+                        await HandleDrawAsync(me, stream);
                         continue;
                     }
 
-                    CardInstance? drawn = null;
-
-                    lock (_locker)
+                    if (action.Equals("DRAW_BABY", StringComparison.OrdinalIgnoreCase))
                     {
-                        if (_deck.Count > 0)
-                        {
-                            var top = _deck[0];
-                            _deck.RemoveAt(0);
-
-                            _hands[me.Player.PlayerId].Add(top);
-                            drawn = top;
-                        }
-                    }
-
-                    if (drawn == null)
-                    {
-                        await Protocol.WriteJsonAsync(stream, new
-                        {
-                            type = "ERROR",
-                            payload = new { message = "Колода пуста" }
-                        });
+                        await HandleDrawBabyAsync(me, stream);
                         continue;
                     }
 
-                    await Protocol.WriteJsonAsync(stream, new
+                    if (action.Equals("PLAY_CARD", StringComparison.OrdinalIgnoreCase))
                     {
-                        type = "CARD_DRAWN",
-                        payload = new
-                        {
-                            instanceId = drawn.InstanceId,
-                            cardId = drawn.CardId
-                        }
-                    });
-
-                    bool isWin;
-                    lock (_locker)
-                    {
-                        _turnCounter++;
-                        isWin = _turnCounter >= 10;
-
-                        if (!isWin)
-                        {
-                            var idx = _clients.FindIndex(c => c.Player.PlayerId == _currentTurnPlayerId);
-                            if (idx < 0) idx = 0;
-                            var next = (idx + 1) % _clients.Count;
-                            _currentTurnPlayerId = _clients[next].Player.PlayerId;
-                        }
+                        await HandlePlayCardAsync(me, stream, payload);
+                        continue;
                     }
 
-                    if (isWin) await BroadcastWinAsync(me.Player.PlayerId);
-                    else await BroadcastStateAsync();
+                    if (action.Equals("DISCARD", StringComparison.OrdinalIgnoreCase))
+                    {
+                        await HandleDiscardAsync(me, stream, payload);
+                        continue;
+                    }
 
-                    continue;
+                    await SendErrorAsync(stream, $"Неизвестное действие: {action}");
                 }
             }
         }
         catch
         {
-            // отключение
+            // ignore
         }
         finally
         {
             await RemoveClientAsync(me);
+        }
+    }
+
+    private bool IsPlayersTurn(ClientConn me)
+    {
+        lock (_locker)
+        {
+            return me.Player.PlayerId == _currentTurnPlayerId;
         }
     }
 
@@ -242,103 +218,5 @@ public class Room
         try { me.Tcp.Close(); } catch { }
 
         Console.WriteLine($"Disconnected: {me.Player.Nickname}");
-    }
-
-    private async Task MaybeStartAsync()
-    {
-        ClientConn[] snapshot;
-        lock (_locker)
-        {
-            if (_clients.Count != 4) return;
-
-            snapshot = _clients.ToArray();
-            _gameStarted = true;
-            _turnCounter = 0;
-            _currentTurnPlayerId = snapshot[0].Player.PlayerId;
-
-            _deck = DeckGenerator.GenerateFullDeck(_catalog);
-
-            _hands.Clear();
-            foreach (var c in snapshot)
-            {
-                _hands[c.Player.PlayerId] = new List<CardInstance>();
-                for (int i = 0; i < 5; i++)
-                    DrawToHand_NoLock(c.Player.PlayerId);
-            }
-        }
-
-        var start = new { type = "START", payload = new { firstPlayerId = snapshot[0].Player.PlayerId } };
-        foreach (var c in snapshot)
-        {
-            try { await Protocol.WriteJsonAsync(c.Stream, start); } catch { }
-        }
-
-        Console.WriteLine("START sent (4 players connected)");
-        await BroadcastStateAsync();
-    }
-
-    private void DrawToHand_NoLock(string playerId)
-    {
-        if (_deck.Count == 0) return;
-        var top = _deck[0];
-        _deck.RemoveAt(0);
-        _hands[playerId].Add(top);
-    }
-
-    private async Task BroadcastJoinedAsync()
-    {
-        ClientConn[] snapshot;
-        object[] players;
-
-        lock (_locker)
-        {
-            snapshot = _clients.ToArray();
-            players = _clients.Select(c => new
-            {
-                playerId = c.Player.PlayerId,
-                nickname = c.Player.Nickname,
-                email = c.Player.Email
-            }).Cast<object>().ToArray();
-        }
-
-        var msg = new { type = "JOINED", payload = new { players } };
-        foreach (var c in snapshot)
-        {
-            try { await Protocol.WriteJsonAsync(c.Stream, msg); } catch { }
-        }
-    }
-
-    private async Task BroadcastStateAsync()
-    {
-        ClientConn[] snapshot;
-        string? turn;
-        int turnNumber;
-
-        lock (_locker)
-        {
-            snapshot = _clients.ToArray();
-            turn = _currentTurnPlayerId;
-            turnNumber = _turnCounter;
-        }
-
-        var state = new { type = "STATE", payload = new { turn, turnNumber } };
-        foreach (var c in snapshot)
-        {
-            try { await Protocol.WriteJsonAsync(c.Stream, state); } catch { }
-        }
-    }
-
-    private async Task BroadcastWinAsync(string winnerId)
-    {
-        ClientConn[] snapshot;
-        lock (_locker) snapshot = _clients.ToArray();
-
-        var win = new { type = "WIN", payload = new { winnerId } };
-        foreach (var c in snapshot)
-        {
-            try { await Protocol.WriteJsonAsync(c.Stream, win); } catch { }
-        }
-
-        Console.WriteLine($"WINNER: {winnerId}");
     }
 }

@@ -2,6 +2,7 @@
 using System.IO;
 using System.Net.Sockets;
 using System.Text.Json;
+using System.Linq;
 
 namespace ClientWinForm
 {
@@ -15,6 +16,8 @@ namespace ClientWinForm
         private readonly Dictionary<string, string> _nickById = new();
 
         private string? _currentTurnId;
+
+        private readonly Dictionary<string, List<(string cardId, string instanceId)>> _stallByPlayerId = new();
 
         public FormGame(TcpClient tcp, NetworkStream stream, string? myId, Dictionary<string, string> nickById, List<string>? initialPlayers)
         {
@@ -36,10 +39,11 @@ namespace ClientWinForm
             }
 
             UpdateMyNickLabel();
-            Shown += (_, __) => _ = ListenAsync(_cts.Token);
-
-            Controls.Add(buttonShowHand);
-            buttonShowHand.BringToFront();
+            Shown += async (_, __) =>
+            {
+                _ = ListenAsync(_cts.Token);
+                await RequestHandAsync();
+            };
         }
 
         private async Task ListenAsync(CancellationToken ct)
@@ -94,8 +98,21 @@ namespace ClientWinForm
                         var turnId = root.GetProperty("payload").GetProperty("turn").GetString();
                         var turnNum = root.GetProperty("payload").GetProperty("turnNumber").GetInt32();
 
+                        var payload = root.GetProperty("payload");
+                        var phase = payload.TryGetProperty("phase", out var ph) ? (ph.GetString() ?? "") : "";
+
+                        string? discardTopCardId = null;
+                        if (payload.TryGetProperty("discardTop", out var dt) && dt.ValueKind != JsonValueKind.Null)
+                            discardTopCardId = dt.GetProperty("cardId").GetString();
+
                         BeginInvoke(new Action(() =>
                         {
+                            bool myTurn = _myId != null && turnId != null && _myId == turnId;
+
+                            buttonPlayCard.Enabled = myTurn && phase == "AfterFirstDraw";
+                            buttonDiscard.Enabled = myTurn && phase == "Discarding";
+
+                            _currentTurnId = turnId;
                             // кто ходит
                             string turnNick = "(неизвестно)";
                             if (turnId != null && _nickById.TryGetValue(turnId, out var n))
@@ -103,6 +120,9 @@ namespace ClientWinForm
 
                             _currentTurnId = turnId;
                             labelTurnWho.Text = $"Текущий ход: {turnNick}";
+
+                            if (!string.IsNullOrWhiteSpace(discardTopCardId))
+                                pictureBoxDiscard.Image = CardImageLoader.Load(discardTopCardId);
                         }));
                     }
                     else if (type == "CARD_DRAWN")
@@ -114,30 +134,62 @@ namespace ClientWinForm
                         {
                             var img = CardImageLoader.Load(cardId);
 
-                            imageListCards.Images.Add(instanceId, img);
+                            if (!imageListCards.Images.ContainsKey(instanceId))
+                                imageListCards.Images.Add(instanceId, img);
 
-                            var item = new ListViewItem
+                            listViewHand.Items.Add(new ListViewItem
                             {
                                 Text = "",
-                                ImageKey = instanceId
-                            };
-                            item.Tag = cardId;
+                                ImageKey = instanceId,
+                                Tag = (cardId, instanceId)
+                            });
                         });
                     }
                     else if (type == "HAND")
                     {
                         var cardsEl = root.GetProperty("payload").GetProperty("cards");
 
-                        var cardIds = new List<string>();
+                        var cards = new List<(string cardId, string instanceId)>();
                         foreach (var c in cardsEl.EnumerateArray())
-                            cardIds.Add(c.GetProperty("cardId").GetString() ?? "");
+                        {
+                            var cardId = c.GetProperty("cardId").GetString() ?? "";
+                            var instanceId = c.TryGetProperty("instanceId", out var iid)
+                                ? (iid.GetString() ?? "")
+                                : "";
+                            cards.Add((cardId, instanceId));
+                        }
 
-                        BeginInvoke(() => ShowHandModal(cardIds));
+                        BeginInvoke(() => ShowHandInListView(cards));
                     }
                     else if (type == "ERROR")
                     {
                         var msg = root.GetProperty("payload").GetProperty("message").GetString() ?? "Unknown error";
                         BeginInvoke(new Action(() => MessageBox.Show("Ошибка: " + msg)));
+                    }
+                    else if (type == "GAME_RESULT")
+                    {
+                        var msg = root.GetProperty("payload").GetProperty("message").GetString() ?? "";
+                        BeginInvoke(() => MessageBox.Show(msg));
+                    }
+                    else if (type == "STALL")
+                    {
+                        var payload = root.GetProperty("payload");
+                        var playerId = payload.GetProperty("playerId").GetString() ?? "";
+                        var cardsEl = payload.GetProperty("cards");
+
+                        var cards = new List<(string cardId, string instanceId)>();
+                        foreach (var c in cardsEl.EnumerateArray())
+                        {
+                            var cardId = c.GetProperty("cardId").GetString() ?? "";
+                            var instanceId = c.GetProperty("instanceId").GetString() ?? "";
+                            cards.Add((cardId, instanceId));
+                        }
+
+                        BeginInvoke(() =>
+                        {
+                            _stallByPlayerId[playerId] = cards;
+                            UpdateAllStallsUI();
+                        });
                     }
                     else
                     {
@@ -199,9 +251,194 @@ namespace ClientWinForm
                 labelMyNick.Text = $"Твой никнейм: {myNick}";
             else
                 labelMyNick.Text = "Твой никнейм: (неизвестно)";
+
+            UpdateOtherPlayersLabels();
+            UpdateAllStallsUI();
         }
 
-        private async Task RequestAndShowHandAsync()
+        private void UpdateOtherPlayersLabels()
+        {
+            if (nickname1 == null || nickname2 == null || nickname3 == null)
+                return;
+
+            string? myNick = null;
+            if (_myId != null && _nickById.TryGetValue(_myId, out var n))
+                myNick = n;
+
+            var allNicks = _nickById.Values
+                .Where(s => !string.IsNullOrWhiteSpace(s))
+                .Distinct(StringComparer.Ordinal)
+                .ToList();
+
+            allNicks.Sort((a, b) =>
+            {
+                var ai = int.TryParse(a, out var an);
+                var bi = int.TryParse(b, out var bn);
+                if (ai && bi) return an.CompareTo(bn);
+                if (ai) return -1;
+                if (bi) return 1;
+                return string.Compare(a, b, StringComparison.OrdinalIgnoreCase);
+            });
+
+            if (!string.IsNullOrWhiteSpace(myNick))
+                allNicks.RemoveAll(x => string.Equals(x, myNick, StringComparison.Ordinal));
+
+            var labels = new[] { nickname1, nickname2, nickname3 };
+            for (int i = 0; i < labels.Length; i++)
+            {
+                labels[i].Text = i < allNicks.Count ? allNicks[i] : "";
+            }
+        }
+
+        private void UpdateAllStallsUI()
+        {
+            if (_myId != null && _stallByPlayerId.TryGetValue(_myId, out var myCards))
+                ShowStallInListView(myCards, removeFromHand: true);
+            else
+                ShowStallInListView(new List<(string cardId, string instanceId)>(), removeFromHand: false);
+
+            UpdateOtherPlayersStallsUI();
+        }
+
+        private void UpdateOtherPlayersStallsUI()
+        {
+            var map = new (Label nickLabel, ListView view)[]
+            {
+                (nickname1, listView1),
+                (nickname2, listView2),
+                (nickname3, listView3),
+            };
+
+            foreach (var (nickLabel, view) in map)
+            {
+                var nick = nickLabel.Text?.Trim();
+
+                if (string.IsNullOrWhiteSpace(nick))
+                {
+                    ClearListView(view);
+                    continue;
+                }
+
+                var playerId = GetPlayerIdByNick(nick);
+                if (playerId == null)
+                {
+                    ClearListView(view);
+                    continue;
+                }
+
+                if (_stallByPlayerId.TryGetValue(playerId, out var cards))
+                    ShowStallInListView(view, cards);
+                else
+                    ClearListView(view);
+            }
+        }
+
+        private string? GetPlayerIdByNick(string nick)
+        {
+            foreach (var kv in _nickById)
+                if (string.Equals(kv.Value, nick, StringComparison.Ordinal))
+                    return kv.Key;
+
+            return null;
+        }
+
+        private void ClearListView(ListView view)
+        {
+            view.BeginUpdate();
+            view.Items.Clear();
+            view.EndUpdate();
+        }
+
+        private void ShowHandInListView(List<(string cardId, string instanceId)> cards)
+        {
+            listViewHand.BeginUpdate();
+            listViewHand.Items.Clear();
+
+            foreach (var (cardId, instanceIdRaw) in cards)
+            {
+                if (string.IsNullOrWhiteSpace(instanceIdRaw))
+                    continue;
+
+                var img = CardImageLoader.Load(cardId);
+                var key = instanceIdRaw;
+
+                if (!imageListCards.Images.ContainsKey(key))
+                    imageListCards.Images.Add(key, img);
+
+                listViewHand.Items.Add(new ListViewItem
+                {
+                    Text = "",
+                    ImageKey = key,
+                    Tag = (cardId, key)
+                });
+            }
+
+            listViewHand.EndUpdate();
+        }
+
+        private void ShowStallInListView(List<(string cardId, string instanceId)> cards, bool removeFromHand)
+        {
+            listViewStall.LargeImageList = imageListCards;
+            listViewStall.View = View.LargeIcon;
+
+            listViewStall.BeginUpdate();
+            listViewStall.Items.Clear();
+
+            foreach (var (cardId, instanceId) in cards)
+            {
+                var img = CardImageLoader.Load(cardId);
+
+                if (!imageListCards.Images.ContainsKey(instanceId))
+                    imageListCards.Images.Add(instanceId, img);
+
+                listViewStall.Items.Add(new ListViewItem
+                {
+                    Text = "",
+                    ImageKey = instanceId,
+                    Tag = (cardId, instanceId)
+                });
+
+                if (removeFromHand)
+                {
+                    for (int i = listViewHand.Items.Count - 1; i >= 0; i--)
+                    {
+                        var t = ((string cardId2, string instanceId2))listViewHand.Items[i].Tag!;
+                        if (t.instanceId2 == instanceId)
+                            listViewHand.Items.RemoveAt(i);
+                    }
+                }
+            }
+
+            listViewStall.EndUpdate();
+        }
+
+        private void ShowStallInListView(ListView target, List<(string cardId, string instanceId)> cards)
+        {
+            target.LargeImageList = imageListCards;
+            target.View = View.LargeIcon;
+
+            target.BeginUpdate();
+            target.Items.Clear();
+
+            foreach (var (cardId, instanceId) in cards)
+            {
+                var img = CardImageLoader.Load(cardId);
+
+                if (!imageListCards.Images.ContainsKey(instanceId))
+                    imageListCards.Images.Add(instanceId, img);
+
+                target.Items.Add(new ListViewItem
+                {
+                    Text = "",
+                    ImageKey = instanceId,
+                    Tag = (cardId, instanceId)
+                });
+            }
+
+            target.EndUpdate();
+        }
+
+        private async Task RequestHandAsync()
         {
             try
             {
@@ -211,46 +448,81 @@ namespace ClientWinForm
                     payload = new { action = "GET_HAND" }
                 });
             }
-            catch (Exception ex)
+            catch
             {
-                MessageBox.Show("Не удалось запросить руку: " + ex.Message);
             }
         }
 
-        private void ShowHandModal(List<string> cardIds)
+        private async void buttonPlayCard_Click(object sender, EventArgs e)
         {
-            var dlg = new Form
+            if (listViewHand.SelectedItems.Count == 0)
             {
-                Text = "Моя рука",
-                StartPosition = FormStartPosition.CenterParent,
-                Width = 900,
-                Height = 600
-            };
-
-            var panel = new FlowLayoutPanel
-            {
-                Dock = DockStyle.Fill,
-                AutoScroll = true,
-                WrapContents = true
-            };
-
-            foreach (var cardId in cardIds)
-            {
-                var img = CardImageLoader.Load(cardId);
-
-                var pb = new PictureBox
-                {
-                    Width = 120,
-                    Height = 180,
-                    SizeMode = PictureBoxSizeMode.Zoom,
-                    Image = img
-                };
-
-                panel.Controls.Add(pb);
+                MessageBox.Show("Выбери карту в руке.");
+                return;
             }
 
-            dlg.Controls.Add(panel);
-            dlg.ShowDialog(this);
+            var item = listViewHand.SelectedItems[0];
+            var (cardId, instanceId) = ((string cardId, string instanceId))item.Tag!;
+
+            try
+            {
+                await Protocol.WriteJsonAsync(_stream, new
+                {
+                    type = "ACTION",
+                    payload = new { action = "PLAY_CARD", instanceId }
+                });
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ошибка отправки: " + ex.Message);
+            }
+        }
+
+        private async void pictureBoxBabyDeck_Click(object? sender, EventArgs e)
+        {
+            if (_myId == null || _currentTurnId == null || _myId != _currentTurnId)
+            {
+                MessageBox.Show("Сейчас не ваш ход");
+                return;
+            }
+
+            try
+            {
+                await Protocol.WriteJsonAsync(_stream, new
+                {
+                    type = "ACTION",
+                    payload = new { action = "DRAW_BABY" }
+                });
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Не удалось отправить запрос: " + ex.Message);
+            }
+        }
+
+        private async void buttonDiscard_Click(object sender, EventArgs e)
+        {
+            if (listViewHand.SelectedItems.Count == 0)
+            {
+                MessageBox.Show("Выбери карту для сброса.");
+                return;
+            }
+
+            var item = listViewHand.SelectedItems[0];
+            var (_, instanceId) = ((string cardId, string instanceId))item.Tag!;
+
+            try
+            {
+                await Protocol.WriteJsonAsync(_stream, new
+                {
+                    type = "ACTION",
+                    payload = new { action = "DISCARD", instanceId }
+                });
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ошибка отправки: " + ex.Message);
+            }
         }
     }
 }

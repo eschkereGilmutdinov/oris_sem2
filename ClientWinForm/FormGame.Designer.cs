@@ -42,8 +42,14 @@
             nickname1 = new Label();
             nickname2 = new Label();
             nickname3 = new Label();
-            buttonShowHand = new Button();
+            listViewHand = new ListView();
+            buttonPlayCard = new Button();
+            pictureBoxBabyDeck = new PictureBox();
+            pictureBoxDiscard = new PictureBox();
+            buttonDiscard = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBoxDeck).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxBabyDeck).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxDiscard).BeginInit();
             SuspendLayout();
             // 
             // listBoxPlayers
@@ -60,7 +66,7 @@
             // labelMyNick
             // 
             labelMyNick.AutoSize = true;
-            labelMyNick.Location = new Point(13, 731);
+            labelMyNick.Location = new Point(13, 542);
             labelMyNick.Margin = new Padding(4, 0, 4, 0);
             labelMyNick.Name = "labelMyNick";
             labelMyNick.Size = new Size(148, 28);
@@ -70,7 +76,7 @@
             // labelTurnWho
             // 
             labelTurnWho.AutoSize = true;
-            labelTurnWho.Location = new Point(12, 782);
+            labelTurnWho.Location = new Point(13, 585);
             labelTurnWho.Name = "labelTurnWho";
             labelTurnWho.Size = new Size(133, 28);
             labelTurnWho.TabIndex = 2;
@@ -90,16 +96,16 @@
             // imageListCards
             // 
             imageListCards.ColorDepth = ColorDepth.Depth32Bit;
-            imageListCards.ImageSize = new Size(159, 222);
+            imageListCards.ImageSize = new Size(120, 180);
             imageListCards.TransparentColor = Color.Transparent;
             // 
             // listViewStall
             // 
             listViewStall.LargeImageList = imageListCards;
-            listViewStall.Location = new Point(263, 653);
+            listViewStall.Location = new Point(263, 542);
             listViewStall.MultiSelect = false;
             listViewStall.Name = "listViewStall";
-            listViewStall.Size = new Size(759, 217);
+            listViewStall.Size = new Size(935, 156);
             listViewStall.TabIndex = 4;
             listViewStall.UseCompatibleStateImageBehavior = false;
             // 
@@ -154,22 +160,66 @@
             nickname3.TabIndex = 10;
             nickname3.Text = "Имя игрока";
             // 
-            // buttonShowHand
+            // listViewHand
             // 
-            buttonShowHand.Location = new Point(1050, 828);
-            buttonShowHand.Name = "buttonShowHand";
-            buttonShowHand.Size = new Size(170, 42);
-            buttonShowHand.TabIndex = 11;
-            buttonShowHand.Text = "Показать руку";
-            buttonShowHand.UseVisualStyleBackColor = true;
-            buttonShowHand.Click += async (_, __) => await RequestAndShowHandAsync();
+            listViewHand.LargeImageList = imageListCards;
+            listViewHand.Location = new Point(263, 722);
+            listViewHand.MultiSelect = false;
+            listViewHand.Name = "listViewHand";
+            listViewHand.Size = new Size(935, 187);
+            listViewHand.TabIndex = 11;
+            listViewHand.UseCompatibleStateImageBehavior = false;
+            // 
+            // buttonPlayCard
+            // 
+            buttonPlayCard.Location = new Point(28, 722);
+            buttonPlayCard.Name = "buttonPlayCard";
+            buttonPlayCard.Size = new Size(191, 41);
+            buttonPlayCard.TabIndex = 12;
+            buttonPlayCard.Text = "Разыграть карту";
+            buttonPlayCard.UseVisualStyleBackColor = true;
+            buttonPlayCard.Click += buttonPlayCard_Click;
+            // 
+            // pictureBoxBabyDeck
+            // 
+            pictureBoxBabyDeck.Image = (Image)resources.GetObject("pictureBoxBabyDeck.Image");
+            pictureBoxBabyDeck.Location = new Point(640, 289);
+            pictureBoxBabyDeck.Name = "pictureBoxBabyDeck";
+            pictureBoxBabyDeck.Size = new Size(159, 222);
+            pictureBoxBabyDeck.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBoxBabyDeck.TabIndex = 13;
+            pictureBoxBabyDeck.TabStop = false;
+            pictureBoxBabyDeck.Click += pictureBoxBabyDeck_Click;
+            // 
+            // pictureBoxDiscard
+            // 
+            pictureBoxDiscard.Location = new Point(1039, 289);
+            pictureBoxDiscard.Name = "pictureBoxDiscard";
+            pictureBoxDiscard.Size = new Size(159, 222);
+            pictureBoxDiscard.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBoxDiscard.TabIndex = 14;
+            pictureBoxDiscard.TabStop = false;
+            // 
+            // buttonDiscard
+            // 
+            buttonDiscard.Location = new Point(28, 784);
+            buttonDiscard.Name = "buttonDiscard";
+            buttonDiscard.Size = new Size(191, 41);
+            buttonDiscard.TabIndex = 15;
+            buttonDiscard.Text = "Сбросить карту";
+            buttonDiscard.UseVisualStyleBackColor = true;
+            buttonDiscard.Click += buttonDiscard_Click;
             // 
             // FormGame
             // 
             AutoScaleDimensions = new SizeF(11F, 28F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1514, 882);
-            Controls.Add(buttonShowHand);
+            ClientSize = new Size(1641, 1054);
+            Controls.Add(buttonDiscard);
+            Controls.Add(pictureBoxDiscard);
+            Controls.Add(pictureBoxBabyDeck);
+            Controls.Add(buttonPlayCard);
+            Controls.Add(listViewHand);
             Controls.Add(nickname3);
             Controls.Add(nickname2);
             Controls.Add(nickname1);
@@ -186,6 +236,8 @@
             Name = "FormGame";
             Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)pictureBoxDeck).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxBabyDeck).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxDiscard).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -204,6 +256,10 @@
         private Label nickname1;
         private Label nickname2;
         private Label nickname3;
-        private Button buttonShowHand;
+        private ListView listViewHand;
+        private Button buttonPlayCard;
+        private PictureBox pictureBoxBabyDeck;
+        private PictureBox pictureBoxDiscard;
+        private Button buttonDiscard;
     }
 }

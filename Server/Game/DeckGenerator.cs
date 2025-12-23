@@ -11,12 +11,13 @@ namespace Server.Game
 
     public static class DeckGenerator
     {
-        public static List<CardInstance> GenerateFullDeck(Common.CardCatalog catalog, int? seed = null)
+        public static (List<CardInstance> mainDeck, List<CardInstance> babyDeck) GenerateMainAndBabyDeck(Common.CardCatalog catalog, int? seed = null)
         {
             if (catalog is null) throw new ArgumentNullException(nameof(catalog));
             if (catalog.Cards is null) throw new ArgumentException("Catalog.Cards is null");
 
-            var deck = new List<CardInstance>(capacity: Math.Max(0, catalog.Cards.Sum(c => Math.Max(0, c.CopiesInDeck))));
+            var mainDeck = new List<CardInstance>();
+            var babyDeck = new List<CardInstance>();
 
             var seenIds = new HashSet<string>(StringComparer.Ordinal);
 
@@ -31,18 +32,24 @@ namespace Server.Game
                 if (card.CopiesInDeck < 0)
                     throw new InvalidOperationException($"Negative copiesInDeck for card {card.Id}");
 
+                bool isBaby = card.Type == Common.CardType.BabyUnicornCard;
+
                 for (int i = 0; i < card.CopiesInDeck; i++)
                 {
-                    deck.Add(new CardInstance(
+                    var inst = new CardInstance(
                         InstanceId: $"{card.Id}#{i + 1}",
                         CardId: card.Id
-                    ));
+                    );
+
+                    if (isBaby) babyDeck.Add(inst);
+                    else mainDeck.Add(inst);
                 }
             }
 
-            ShuffleInPlace(deck, seed);
+            ShuffleInPlace(mainDeck, seed);
+            ShuffleInPlace(babyDeck, seed.HasValue ? seed.Value + 1 : null);
 
-            return deck;
+            return (mainDeck, babyDeck);
         }
 
         private static void ShuffleInPlace<T>(IList<T> list, int? seed)
