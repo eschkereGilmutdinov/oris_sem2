@@ -44,8 +44,8 @@ namespace Server.Game
                     _stalls[pid] = new List<CardInstance>();
 
                     // стартовая раздача: 1 малыш + 4 из основной колоды
-                    DrawBabyToHand_NoLock(pid);
-                    for (int i = 0; i < 4; i++)
+                    DrawBabyToStall_NoLock(pid);
+                    for (int i = 0; i < 5; i++)
                         DrawToHand_NoLock(pid);
                 }
             }
@@ -71,12 +71,17 @@ namespace Server.Game
             _hands[playerId].Add(top);
         }
 
-        private void DrawBabyToHand_NoLock(string playerId)
+        private void DrawBabyToStall_NoLock(string playerId)
         {
             if (_babyDeck.Count == 0) return;
+
             var top = _babyDeck[0];
             _babyDeck.RemoveAt(0);
-            _hands[playerId].Add(top);
+
+            if (!_stalls.TryGetValue(playerId, out var stall))
+                _stalls[playerId] = stall = new List<CardInstance>();
+
+            stall.Add(top);
         }
 
         private async Task MaybeEnterDiscardPhaseOrAdvanceAsync()

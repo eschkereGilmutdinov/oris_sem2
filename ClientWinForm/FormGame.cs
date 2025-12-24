@@ -19,9 +19,20 @@ namespace ClientWinForm
 
         private readonly Dictionary<string, List<(string cardId, string instanceId)>> _stallByPlayerId = new();
 
+        private readonly ToolTip _cardTip = new ToolTip
+        {
+            ShowAlways = true,
+            AutoPopDelay = 10000,
+            InitialDelay = 150,
+            ReshowDelay = 50
+        };
+
+
         public FormGame(TcpClient tcp, NetworkStream stream, string? myId, Dictionary<string, string> nickById, List<string>? initialPlayers)
         {
             InitializeComponent();
+            HookCardTooltips();
+            this.DoubleBuffered = true;
             _tcp = tcp;
             _stream = stream;
             Text = "Unstable Unicorns";
@@ -112,6 +123,23 @@ namespace ClientWinForm
                             buttonPlayCard.Enabled = myTurn && phase == "AfterFirstDraw";
                             buttonDiscard.Enabled = myTurn && phase == "Discarding";
 
+                            if (!myTurn)
+                            {
+                                labelHint.Text = "";
+                            }
+                            else if (phase == "MustDraw")
+                            {
+                                labelHint.Text = "Обязательный шаг: возьмите карту из колоды";
+                            }
+                            else if (phase == "AfterFirstDraw")
+                            {
+                                labelHint.Text = "Выберите действие: взять ещё одну карту ИЛИ разыграть карту";
+                            }
+                            else if (phase == "Discarding")
+                            {
+                                labelHint.Text = "Слишком много карт. Выберите карты для сброса";
+                            }
+
                             _currentTurnId = turnId;
                             // кто ходит
                             string turnNick = "(неизвестно)";
@@ -130,12 +158,20 @@ namespace ClientWinForm
                         var cardId = root.GetProperty("payload").GetProperty("cardId").GetString() ?? "";
                         var instanceId = root.GetProperty("payload").GetProperty("instanceId").GetString() ?? "";
 
-                        BeginInvoke(() =>
+                        BeginInvoke(async () =>
                         {
                             var img = CardImageLoader.Load(cardId);
 
                             if (!imageListCards.Images.ContainsKey(instanceId))
                                 imageListCards.Images.Add(instanceId, img);
+
+                            await Animations.FlyCardToHandAsync(
+                                hostForm: this,
+                                cardImage: img,
+                                deckControl: pictureBoxDeck,
+                                handListView: listViewHand,
+                                cardSize: new Size(159, 222)
+                            );
 
                             listViewHand.Items.Add(new ListViewItem
                             {
@@ -523,6 +559,35 @@ namespace ClientWinForm
             {
                 MessageBox.Show("Ошибка отправки: " + ex.Message);
             }
+        }
+
+        private void HookCardTooltips()
+        {
+            HookListViewTooltip(listViewHand);
+            HookListViewTooltip(listViewStall);
+            HookListViewTooltip(listView1);
+            HookListViewTooltip(listView2);
+            HookListViewTooltip(listView3);
+        }
+
+        private void HookListViewTooltip(ListView lv)
+        {
+            lv.ItemMouseHover += (_, e) =>
+            {
+                if (e.Item?.Tag is ValueTuple<string, string> t)
+                {
+                    var cardId = t.Item1;
+                    var rule = CardRuleLoader.GetRule(cardId);
+
+                    var p = lv.PointToClient(Cursor.Position);
+                    p.Offset(18, 18);
+
+                    _cardTip.Show(rule, lv, p, 5000);
+                }
+            };
+
+            lv.MouseLeave += (_, __) => _cardTip.Hide(lv);
+            lv.MouseDown += (_, __) => _cardTip.Hide(lv);
         }
     }
 }

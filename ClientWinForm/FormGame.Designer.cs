@@ -47,6 +47,7 @@
             pictureBoxBabyDeck = new PictureBox();
             pictureBoxDiscard = new PictureBox();
             buttonDiscard = new Button();
+            labelHint = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBoxDeck).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBoxBabyDeck).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBoxDiscard).BeginInit();
@@ -57,10 +58,10 @@
             listBoxPlayers.Font = new Font("Segoe UI", 12F);
             listBoxPlayers.FormattingEnabled = true;
             listBoxPlayers.ItemHeight = 28;
-            listBoxPlayers.Location = new Point(1262, 585);
+            listBoxPlayers.Location = new Point(1614, 284);
             listBoxPlayers.Margin = new Padding(4);
             listBoxPlayers.Name = "listBoxPlayers";
-            listBoxPlayers.Size = new Size(234, 256);
+            listBoxPlayers.Size = new Size(261, 144);
             listBoxPlayers.TabIndex = 0;
             // 
             // labelMyNick
@@ -85,7 +86,7 @@
             // pictureBoxDeck
             // 
             pictureBoxDeck.Image = (Image)resources.GetObject("pictureBoxDeck.Image");
-            pictureBoxDeck.Location = new Point(263, 289);
+            pictureBoxDeck.Location = new Point(512, 296);
             pictureBoxDeck.Name = "pictureBoxDeck";
             pictureBoxDeck.Size = new Size(159, 222);
             pictureBoxDeck.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -105,7 +106,7 @@
             listViewStall.Location = new Point(263, 542);
             listViewStall.MultiSelect = false;
             listViewStall.Name = "listViewStall";
-            listViewStall.Size = new Size(935, 156);
+            listViewStall.Size = new Size(1612, 197);
             listViewStall.TabIndex = 4;
             listViewStall.UseCompatibleStateImageBehavior = false;
             // 
@@ -113,30 +114,30 @@
             // 
             listView1.Location = new Point(35, 12);
             listView1.Name = "listView1";
-            listView1.Size = new Size(387, 170);
+            listView1.Size = new Size(428, 197);
             listView1.TabIndex = 5;
             listView1.UseCompatibleStateImageBehavior = false;
             // 
             // listView2
             // 
-            listView2.Location = new Point(550, 12);
+            listView2.Location = new Point(772, 12);
             listView2.Name = "listView2";
-            listView2.Size = new Size(387, 170);
+            listView2.Size = new Size(428, 197);
             listView2.TabIndex = 6;
             listView2.UseCompatibleStateImageBehavior = false;
             // 
             // listView3
             // 
-            listView3.Location = new Point(1077, 12);
+            listView3.Location = new Point(1447, 12);
             listView3.Name = "listView3";
-            listView3.Size = new Size(387, 170);
+            listView3.Size = new Size(428, 197);
             listView3.TabIndex = 7;
             listView3.UseCompatibleStateImageBehavior = false;
             // 
             // nickname1
             // 
             nickname1.AutoSize = true;
-            nickname1.Location = new Point(179, 185);
+            nickname1.Location = new Point(183, 212);
             nickname1.Name = "nickname1";
             nickname1.Size = new Size(120, 28);
             nickname1.TabIndex = 8;
@@ -145,7 +146,7 @@
             // nickname2
             // 
             nickname2.AutoSize = true;
-            nickname2.Location = new Point(700, 185);
+            nickname2.Location = new Point(928, 212);
             nickname2.Name = "nickname2";
             nickname2.Size = new Size(120, 28);
             nickname2.TabIndex = 9;
@@ -154,7 +155,7 @@
             // nickname3
             // 
             nickname3.AutoSize = true;
-            nickname3.Location = new Point(1229, 185);
+            nickname3.Location = new Point(1614, 212);
             nickname3.Name = "nickname3";
             nickname3.Size = new Size(120, 28);
             nickname3.TabIndex = 10;
@@ -163,10 +164,10 @@
             // listViewHand
             // 
             listViewHand.LargeImageList = imageListCards;
-            listViewHand.Location = new Point(263, 722);
+            listViewHand.Location = new Point(263, 763);
             listViewHand.MultiSelect = false;
             listViewHand.Name = "listViewHand";
-            listViewHand.Size = new Size(935, 187);
+            listViewHand.Size = new Size(1612, 197);
             listViewHand.TabIndex = 11;
             listViewHand.UseCompatibleStateImageBehavior = false;
             // 
@@ -183,7 +184,7 @@
             // pictureBoxBabyDeck
             // 
             pictureBoxBabyDeck.Image = (Image)resources.GetObject("pictureBoxBabyDeck.Image");
-            pictureBoxBabyDeck.Location = new Point(640, 289);
+            pictureBoxBabyDeck.Location = new Point(889, 296);
             pictureBoxBabyDeck.Name = "pictureBoxBabyDeck";
             pictureBoxBabyDeck.Size = new Size(159, 222);
             pictureBoxBabyDeck.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -193,7 +194,7 @@
             // 
             // pictureBoxDiscard
             // 
-            pictureBoxDiscard.Location = new Point(1039, 289);
+            pictureBoxDiscard.Location = new Point(1288, 296);
             pictureBoxDiscard.Name = "pictureBoxDiscard";
             pictureBoxDiscard.Size = new Size(159, 222);
             pictureBoxDiscard.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -210,11 +211,21 @@
             buttonDiscard.UseVisualStyleBackColor = true;
             buttonDiscard.Click += buttonDiscard_Click;
             // 
+            // labelHint
+            // 
+            labelHint.AutoSize = true;
+            labelHint.Location = new Point(770, 256);
+            labelHint.Name = "labelHint";
+            labelHint.Size = new Size(65, 28);
+            labelHint.TabIndex = 16;
+            labelHint.Text = "label1";
+            // 
             // FormGame
             // 
             AutoScaleDimensions = new SizeF(11F, 28F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1641, 1054);
+            ClientSize = new Size(1902, 1033);
+            Controls.Add(labelHint);
             Controls.Add(buttonDiscard);
             Controls.Add(pictureBoxDiscard);
             Controls.Add(pictureBoxBabyDeck);
@@ -261,5 +272,6 @@
         private PictureBox pictureBoxBabyDeck;
         private PictureBox pictureBoxDiscard;
         private Button buttonDiscard;
+        private Label labelHint;
     }
 }
