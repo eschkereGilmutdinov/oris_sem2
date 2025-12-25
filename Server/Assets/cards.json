@@ -10,13 +10,7 @@
       "copiesInDeck": 1,
       "effects": [
         {
-          "kind": "REPLACE_EVENT",
-          "timing": "STATIC",
-          "when": {
-            "events": [ "SACRIFICE", "DESTROY", "RETURN_TO_HAND" ],
-            "target": "SELF"
-          },
-          "replaceWith": { "moveTo": "NURSERY" }
+          "kind": "PROTECT"
         }
       ],
       "tags": [ "baby_unicorn", "replacement", "protection" ]
@@ -30,13 +24,7 @@
       "copiesInDeck": 1,
       "effects": [
         {
-          "kind": "REPLACE_EVENT",
-          "timing": "STATIC",
-          "when": {
-            "events": [ "SACRIFICE", "DESTROY", "RETURN_TO_HAND" ],
-            "target": "SELF"
-          },
-          "replaceWith": { "moveTo": "NURSERY" }
+          "kind": "PROTECT"
         }
       ],
       "tags": [ "baby_unicorn", "replacement", "protection" ]
@@ -50,13 +38,7 @@
       "copiesInDeck": 1,
       "effects": [
         {
-          "kind": "REPLACE_EVENT",
-          "timing": "STATIC",
-          "when": {
-            "events": [ "SACRIFICE", "DESTROY", "RETURN_TO_HAND" ],
-            "target": "SELF"
-          },
-          "replaceWith": { "moveTo": "NURSERY" }
+          "kind": "PROTECT"
         }
       ],
       "tags": [ "baby_unicorn", "replacement", "protection" ]
@@ -70,13 +52,7 @@
       "copiesInDeck": 1,
       "effects": [
         {
-          "kind": "REPLACE_EVENT",
-          "timing": "STATIC",
-          "when": {
-            "events": [ "SACRIFICE", "DESTROY", "RETURN_TO_HAND" ],
-            "target": "SELF"
-          },
-          "replaceWith": { "moveTo": "NURSERY" }
+          "kind": "PROTECT"
         }
       ],
       "tags": [ "baby_unicorn", "replacement", "protection" ]
@@ -90,13 +66,7 @@
       "copiesInDeck": 1,
       "effects": [
         {
-          "kind": "REPLACE_EVENT",
-          "timing": "STATIC",
-          "when": {
-            "events": [ "SACRIFICE", "DESTROY", "RETURN_TO_HAND" ],
-            "target": "SELF"
-          },
-          "replaceWith": { "moveTo": "NURSERY" }
+          "kind": "PROTECT"
         }
       ],
       "tags": [ "baby_unicorn", "replacement", "protection" ]
@@ -110,13 +80,7 @@
       "copiesInDeck": 1,
       "effects": [
         {
-          "kind": "REPLACE_EVENT",
-          "timing": "STATIC",
-          "when": {
-            "events": [ "SACRIFICE", "DESTROY", "RETURN_TO_HAND" ],
-            "target": "SELF"
-          },
-          "replaceWith": { "moveTo": "NURSERY" }
+          "kind": "PROTECT"
         }
       ],
       "tags": [ "baby_unicorn", "replacement", "protection" ]
@@ -130,13 +94,7 @@
       "copiesInDeck": 1,
       "effects": [
         {
-          "kind": "REPLACE_EVENT",
-          "timing": "STATIC",
-          "when": {
-            "events": [ "SACRIFICE", "DESTROY", "RETURN_TO_HAND" ],
-            "target": "SELF"
-          },
-          "replaceWith": { "moveTo": "NURSERY" }
+          "kind": "PROTECT"
         }
       ],
       "tags": [ "baby_unicorn", "replacement", "protection" ]
@@ -150,13 +108,7 @@
       "copiesInDeck": 1,
       "effects": [
         {
-          "kind": "REPLACE_EVENT",
-          "timing": "STATIC",
-          "when": {
-            "events": [ "SACRIFICE", "DESTROY", "RETURN_TO_HAND" ],
-            "target": "SELF"
-          },
-          "replaceWith": { "moveTo": "NURSERY" }
+          "kind": "PROTECT"
         }
       ],
       "tags": [ "baby_unicorn", "replacement", "protection" ]
@@ -170,13 +122,7 @@
       "copiesInDeck": 1,
       "effects": [
         {
-          "kind": "REPLACE_EVENT",
-          "timing": "STATIC",
-          "when": {
-            "events": [ "SACRIFICE", "DESTROY", "RETURN_TO_HAND" ],
-            "target": "SELF"
-          },
-          "replaceWith": { "moveTo": "NURSERY" }
+          "kind": "PROTECT"
         }
       ],
       "tags": [ "baby_unicorn", "replacement", "protection" ]
@@ -190,13 +136,7 @@
       "copiesInDeck": 1,
       "effects": [
         {
-          "kind": "REPLACE_EVENT",
-          "timing": "STATIC",
-          "when": {
-            "events": [ "SACRIFICE", "DESTROY", "RETURN_TO_HAND" ],
-            "target": "SELF"
-          },
-          "replaceWith": { "moveTo": "NURSERY" }
+          "kind": "PROTECT"
         }
       ],
       "tags": [ "baby_unicorn", "replacement", "protection" ]
@@ -210,13 +150,7 @@
       "copiesInDeck": 1,
       "effects": [
         {
-          "kind": "REPLACE_EVENT",
-          "timing": "STATIC",
-          "when": {
-            "events": [ "SACRIFICE", "DESTROY", "RETURN_TO_HAND" ],
-            "target": "SELF"
-          },
-          "replaceWith": { "moveTo": "NURSERY" }
+          "kind": "PROTECT"
         }
       ],
       "tags": [ "baby_unicorn", "replacement", "protection" ]
@@ -230,13 +164,7 @@
       "copiesInDeck": 1,
       "effects": [
         {
-          "kind": "REPLACE_EVENT",
-          "timing": "STATIC",
-          "when": {
-            "events": [ "SACRIFICE", "DESTROY", "RETURN_TO_HAND" ],
-            "target": "SELF"
-          },
-          "replaceWith": { "moveTo": "NURSERY" }
+          "kind": "PROTECT"
         }
       ],
       "tags": [ "baby_unicorn", "replacement", "protection" ]
@@ -250,13 +178,7 @@
       "copiesInDeck": 1,
       "effects": [
         {
-          "kind": "REPLACE_EVENT",
-          "timing": "STATIC",
-          "when": {
-            "events": [ "SACRIFICE", "DESTROY", "RETURN_TO_HAND" ],
-            "target": "SELF"
-          },
-          "replaceWith": { "moveTo": "NURSERY" }
+          "kind": "PROTECT"
         }
       ],
       "tags": [ "baby_unicorn", "replacement", "protection" ]
@@ -342,14 +264,8 @@
       "copiesInDeck": 1,
       "effects": [
         {
-          "kind": "SEARCH_DECK",
-          "timing": "ON_ENTER_STABLE",
-          "optional": true,
-          "criteria": { "cardName": "Twinkicorn" },
-          "result": {
-            "action": "ADD_TO_HAND",
-            "shuffleDeckAfter": true
-          }
+          "kind": "DRAW_SEARCH",
+          "criteria": { "cardName": "Twinkicorn" }
         }
       ],
       "tags": [ "magical_unicorn", "search", "tutor" ]
@@ -363,20 +279,11 @@
       "copiesInDeck": 1,
       "effects": [
         {
-          "kind": "STEAL_WITH_DISCARD_COST",
-          "timing": "START_OF_YOUR_TURN",
-          "optional": true,
-          "condition": { "selfLocation": "STABLE" },
-          "cost": {
-            "action": "DISCARD",
-            "amount": 3,
-            "from": "YOUR_HAND"
-          },
+          "kind": "STEAL_BOARD",
           "criteria": {
             "cardType": "UNICORN",
             "fromZone": "OTHER_PLAYER_STABLE"
-          },
-          "result": { "toZone": "YOUR_STABLE" }
+          }
         }
       ],
       "tags": [ "magical_unicorn", "steal", "discard_cost" ]
@@ -390,13 +297,11 @@
       "copiesInDeck": 1,
       "effects": [
         {
-          "kind": "EACH_PLAYER_SACRIFICE",
-          "timing": "ON_ENTER_STABLE",
+          "kind": "DESTROY_SACRIFICE",
           "criteria": {
             "cardType": "UNICORN",
             "fromZone": "STABLE"
-          },
-          "result": { "amount": 1 }
+          }
         }
       ],
       "tags": [ "magical_unicorn", "sacrifice", "each_player" ]
@@ -410,24 +315,7 @@
       "copiesInDeck": 1,
       "effects": [
         {
-          "kind": "EACH_OTHER_PLAYER_RANDOM_PULL_WITH_SACRIFICE_COST",
-          "timing": "START_OF_YOUR_TURN",
-          "optional": true,
-          "condition": { "selfLocation": "STABLE" },
-          "cost": {
-            "action": "SACRIFICE",
-            "criteria": {
-              "cardType": "BASIC_UNICORN",
-              "fromZone": "YOUR_STABLE"
-            },
-            "amount": 1
-          },
-          "result": {
-            "action": "PULL_RANDOM_FROM_HAND",
-            "from": "EACH_OTHER_PLAYER",
-            "toZone": "YOUR_HAND",
-            "amountEach": 1
-          }
+          "kind": "STEAL_HAND"
         }
       ],
       "tags": [ "magical_unicorn", "sacrifice_cost", "steal_hand", "each_other_player" ]
@@ -441,14 +329,11 @@
       "copiesInDeck": 1,
       "effects": [
         {
-          "kind": "RECOVER_FROM_DISCARD",
-          "timing": "ON_ENTER_STABLE",
-          "optional": true,
+          "kind": "DRAW_SEARCH",
           "criteria": {
             "fromZone": "DISCARD",
             "cards": "ANY"
-          },
-          "result": { "action": "ADD_TO_HAND" }
+          }
         }
       ],
       "tags": [ "magical_unicorn", "recursion", "discard" ]
@@ -462,15 +347,12 @@
       "copiesInDeck": 1,
       "effects": [
         {
-          "kind": "LOOK_AND_STEAL_FROM_HAND",
-          "timing": "ON_ENTER_STABLE",
-          "optional": true,
+          "kind": "STEAL_HAND",
           "criteria": {
             "by": "CHOSEN_OTHER_PLAYER",
             "fromZone": "HAND",
             "cardType": "UNICORN"
-          },
-          "result": { "action": "ADD_TO_HAND" }
+          }
         }
       ],
       "tags": [ "magical_unicorn", "peek", "steal_hand" ]
@@ -484,9 +366,8 @@
       "copiesInDeck": 1,
       "effects": [
         {
-          "kind": "RESTRICT_ZONE_ENTRY",
-          "timing": "STATIC",
-          "restriction": {
+          "kind": "RULE_MOD",
+          "criteria": {
             "cardType": "BABY_UNICORN",
             "forbiddenZone": "STABLE",
             "appliesTo": "ALL_PLAYERS"
@@ -504,11 +385,7 @@
       "copiesInDeck": 1,
       "effects": [
         {
-          "kind": "FORCE_DISCARD",
-          "timing": "ON_ENTER_STABLE",
-          "optional": true,
-          "target": "CHOSEN_OTHER_PLAYER",
-          "amount": 2
+          "kind": "DISCARD"
         }
       ],
       "tags": [ "magical_unicorn", "discard", "control" ]
@@ -522,22 +399,15 @@
       "copiesInDeck": 1,
       "effects": [
         {
-          "kind": "STEAL_CARD",
-          "timing": "ON_ENTER_STABLE",
+          "kind": "STEAL_BOARD",
           "criteria": {
             "cardType": "BABY_UNICORN",
             "fromZone": "NURSERY"
-          },
-          "result": {
-            "toZone": "YOUR_STABLE",
-            "linkToSource": true
           }
         },
         {
-          "kind": "RETURN_LINKED_CARD_ON_LEAVE",
-          "timing": "ON_LEAVE_STABLE",
-          "criteria": { "linkedCardType": "BABY_UNICORN" },
-          "result": { "returnTo": "ORIGINAL_STABLE" }
+          "kind": "STEAL_BOARD",
+          "criteria": { "linkedCardType": "BABY_UNICORN" }
         }
       ],
       "tags": [ "magical_unicorn", "steal", "baby_unicorn", "linked_return" ]
@@ -551,14 +421,11 @@
       "copiesInDeck": 1,
       "effects": [
         {
-          "kind": "COUNT_AS_MULTIPLE_UNICORNS",
-          "timing": "STATIC",
-          "amount": 2
+          "kind": "RULE_MOD"
         },
         {
-          "kind": "RESTRICT_PLAY",
-          "timing": "STATIC",
-          "restriction": {
+          "kind": "RULE_MOD",
+          "criteria": {
             "forbiddenTypes": [ "MagicCard" ],
             "appliesTo": "YOU"
           }
@@ -575,18 +442,7 @@
       "copiesInDeck": 1,
       "effects": [
         {
-          "kind": "REPLACE_EVENT_WITH_COST",
-          "timing": "STATIC",
-          "optional": true,
-          "when": {
-            "events": [ "DESTROY" ],
-            "target": "YOUR_UNICORN_IN_STABLE"
-          },
-          "cost": {
-            "action": "SACRIFICE",
-            "target": "SELF"
-          },
-          "replaceWith": { "preventOriginal": true }
+          "kind": "PROTECT"
         }
       ],
       "tags": [ "magical_unicorn", "protection", "replacement" ]
@@ -600,16 +456,11 @@
       "copiesInDeck": 1,
       "effects": [
         {
-          "kind": "DESTROY_WITH_DISCARD_HAND_COST",
-          "timing": "START_OF_YOUR_TURN",
-          "optional": true,
-          "condition": { "selfLocation": "STABLE" },
-          "cost": { "action": "DISCARD_HAND" },
+          "kind": "DESTROY_SACRIFICE",
           "criteria": {
             "cardType": "UNICORN",
             "fromZone": "ANY_STABLE"
-          },
-          "result": { "action": "DESTROY" }
+          }
         }
       ],
       "tags": [ "magical_unicorn", "destroy", "discard_hand", "control" ]
@@ -623,23 +474,14 @@
       "copiesInDeck": 1,
       "effects": [
         {
-          "kind": "RECOVER_FROM_DISCARD",
-          "timing": "ON_ENTER_STABLE",
-          "optional": true,
+          "kind": "DRAW_SEARCH",
           "criteria": {
             "fromZone": "DISCARD",
             "cardType": "NEIGH"
-          },
-          "result": { "action": "ADD_TO_HAND" }
+          }
         },
         {
-          "kind": "RETURN_TO_HAND_ON_EVENTS",
-          "timing": "STATIC",
-          "when": {
-            "events": [ "SACRIFICE", "DESTROY" ],
-            "target": "SELF"
-          },
-          "replaceWith": { "moveTo": "YOUR_HAND" }
+          "kind": "PROTECT"
         }
       ],
       "tags": [ "magical_unicorn", "recursion", "neigh", "protection" ]
@@ -653,14 +495,11 @@
       "copiesInDeck": 1,
       "effects": [
         {
-          "kind": "MOVE_CARD",
-          "timing": "ON_ENTER_STABLE",
-          "optional": true,
+          "kind": "STEAL_BOARD",
           "criteria": {
             "cardType": "BABY_UNICORN",
             "fromZone": "NURSERY"
-          },
-          "result": { "toZone": "YOUR_STABLE" }
+          }
         }
       ],
       "tags": [ "magical_unicorn", "baby_unicorn", "summon" ]
@@ -674,9 +513,7 @@
       "copiesInDeck": 1,
       "effects": [
         {
-          "kind": "EACH_OTHER_PLAYER_DISCARD",
-          "timing": "ON_ENTER_STABLE",
-          "amountEach": 1
+          "kind": "DISCARD"
         }
       ],
       "tags": [ "magical_unicorn", "discard", "each_other_player" ]
@@ -690,14 +527,8 @@
       "copiesInDeck": 1,
       "effects": [
         {
-          "kind": "SEARCH_DECK",
-          "timing": "ON_ENTER_STABLE",
-          "optional": true,
-          "criteria": { "cardType": "UNICORN" },
-          "result": {
-            "action": "ADD_TO_HAND",
-            "shuffleDeckAfter": true
-          }
+          "kind": "DRAW_SEARCH",
+          "criteria": { "cardType": "UNICORN" }
         }
       ],
       "tags": [ "magical_unicorn", "search", "tutor" ]
@@ -711,20 +542,10 @@
       "copiesInDeck": 1,
       "effects": [
         {
-          "kind": "FORCE_DISCARD",
-          "timing": "ON_ENTER_STABLE",
-          "optional": true,
-          "target": "CHOSEN_OTHER_PLAYER",
-          "amount": 1
+          "kind": "DISCARD"
         },
         {
-          "kind": "RETURN_TO_HAND_ON_EVENTS",
-          "timing": "STATIC",
-          "when": {
-            "events": [ "SACRIFICE", "DESTROY" ],
-            "target": "SELF"
-          },
-          "replaceWith": { "moveTo": "YOUR_HAND" }
+          "kind": "PROTECT"
         }
       ],
       "tags": [ "magical_unicorn", "discard", "protection", "recursion" ]
@@ -738,22 +559,15 @@
       "copiesInDeck": 1,
       "effects": [
         {
-          "kind": "STEAL_CARD",
-          "timing": "ON_ENTER_STABLE",
+          "kind": "STEAL_BOARD",
           "criteria": {
             "cardType": "BASIC_UNICORN",
             "fromZone": "OTHER_PLAYER_STABLE"
-          },
-          "result": {
-            "toZone": "YOUR_STABLE",
-            "linkToSource": true
           }
         },
         {
-          "kind": "RETURN_LINKED_CARD_ON_LEAVE",
-          "timing": "ON_LEAVE_STABLE",
-          "criteria": { "linkedCardType": "BASIC_UNICORN" },
-          "result": { "returnTo": "ORIGINAL_STABLE" }
+          "kind": "STEAL_BOARD",
+          "criteria": { "linkedCardType": "BASIC_UNICORN" }
         }
       ],
       "tags": [ "magical_unicorn", "steal", "linked_return" ]
@@ -767,15 +581,12 @@
       "copiesInDeck": 1,
       "effects": [
         {
-          "kind": "LOOK_AND_DISCARD_FROM_HAND",
-          "timing": "ON_ENTER_STABLE",
-          "optional": true,
+          "kind": "DISCARD",
           "criteria": {
             "by": "CHOSEN_OTHER_PLAYER",
             "fromZone": "HAND",
             "cardType": "UNICORN"
-          },
-          "result": { "moveTo": "DISCARD" }
+          }
         }
       ],
       "tags": [ "magical_unicorn", "peek", "discard", "control" ]
@@ -789,18 +600,7 @@
       "copiesInDeck": 1,
       "effects": [
         {
-          "kind": "MOVE_SELF_THEN_STEAL",
-          "timing": "START_OF_YOUR_TURN",
-          "optional": true,
-          "condition": { "selfLocation": "STABLE" },
-          "result": {
-            "moveSelfTo": "CHOSEN_OTHER_PLAYER_STABLE",
-            "steal": {
-              "cardType": "UNICORN",
-              "fromZone": "THAT_PLAYER_STABLE",
-              "toZone": "YOUR_STABLE"
-            }
-          }
+          "kind": "STEAL_BOARD"
         }
       ],
       "tags": [ "magical_unicorn", "move", "steal" ]
@@ -814,23 +614,11 @@
       "copiesInDeck": 1,
       "effects": [
         {
-          "kind": "DESTROY_WITH_SACRIFICE_COST",
-          "timing": "START_OF_YOUR_TURN",
-          "optional": true,
-          "condition": { "selfLocation": "STABLE" },
-          "cost": {
-            "action": "SACRIFICE",
-            "criteria": {
-              "cards": "ANY",
-              "fromZone": "YOUR_STABLE_OR_HAND"
-            },
-            "amount": 1
-          },
+          "kind": "DESTROY_SACRIFICE",
           "criteria": {
             "cardType": "UNICORN",
             "fromZone": "ANY_STABLE"
-          },
-          "result": { "action": "DESTROY" }
+          }
         }
       ],
       "tags": [ "magical_unicorn", "destroy", "sacrifice_cost" ]
@@ -844,8 +632,7 @@
       "copiesInDeck": 1,
       "effects": [
         {
-          "kind": "SACRIFICE_ALL",
-          "timing": "ON_ENTER_STABLE",
+          "kind": "DESTROY_SACRIFICE",
           "criteria": {
             "cardType": "DOWNGRADE",
             "fromZone": "YOUR_STABLE"
@@ -863,14 +650,11 @@
       "copiesInDeck": 1,
       "effects": [
         {
-          "kind": "BOUNCE_CARD",
-          "timing": "ON_ENTER_STABLE",
-          "optional": true,
+          "kind": "STEAL_BOARD",
           "criteria": {
             "fromZone": "OTHER_PLAYER_STABLE",
             "cards": "ANY"
-          },
-          "result": { "moveTo": "OWNER_HAND" }
+          }
         }
       ],
       "tags": [ "magical_unicorn", "bounce", "control" ]
@@ -884,14 +668,7 @@
       "copiesInDeck": 1,
       "effects": [
         {
-          "kind": "SCRY",
-          "timing": "ON_ENTER_STABLE",
-          "optional": true,
-          "amount": 3,
-          "result": {
-            "reorder": false,
-            "returnToTopSameOrder": true
-          }
+          "kind": "DRAW_SEARCH"
         }
       ],
       "tags": [ "magical_unicorn", "scry", "setup" ]
@@ -905,9 +682,8 @@
       "copiesInDeck": 1,
       "effects": [
         {
-          "kind": "PLAY_REQUIREMENT",
-          "timing": "STATIC",
-          "requirement": {
+          "kind": "RULE_MOD",
+          "criteria": {
             "yourStableHas": {
               "cardType": "BASIC_UNICORN",
               "amountAtLeast": 1
@@ -915,12 +691,7 @@
           }
         },
         {
-          "kind": "FORCE_DISCARD",
-          "timing": "START_OF_YOUR_TURN",
-          "optional": true,
-          "condition": { "selfLocation": "STABLE" },
-          "target": "CHOSEN_OTHER_PLAYER",
-          "amount": 1
+          "kind": "DISCARD"
         }
       ],
       "tags": [ "magical_unicorn", "requirement", "discard", "control" ]
@@ -934,14 +705,11 @@
       "copiesInDeck": 1,
       "effects": [
         {
-          "kind": "COUNT_AS_MULTIPLE_UNICORNS",
-          "timing": "STATIC",
-          "amount": 2
+          "kind": "RULE_MOD"
         },
         {
-          "kind": "RESTRICT_PLAY",
-          "timing": "STATIC",
-          "restriction": {
+          "kind": "RULE_MOD",
+          "criteria": {
             "forbiddenTypes": [ "BasicUnicornCard" ],
             "appliesTo": "YOU"
           }
@@ -958,14 +726,8 @@
       "copiesInDeck": 1,
       "effects": [
         {
-          "kind": "SEARCH_DECK",
-          "timing": "ON_ENTER_STABLE",
-          "optional": true,
-          "criteria": { "cardName": "Bear Daddy Unicorn" },
-          "result": {
-            "action": "ADD_TO_HAND",
-            "shuffleDeckAfter": true
-          }
+          "kind": "DRAW_SEARCH",
+          "criteria": { "cardName": "Bear Daddy Unicorn" }
         }
       ],
       "tags": [ "magical_unicorn", "search", "tutor" ]
@@ -979,10 +741,11 @@
       "copiesInDeck": 1,
       "effects": [
         {
-          "kind": "HAND_LIMIT_MOD",
-          "timing": "STATIC",
-          "amount": 1,
-          "appliesTo": "YOU"
+          "kind": "RULE_MOD",
+          "criteria": {
+            "amount": 1,
+            "appliesTo": "YOU"
+          }
         }
       ],
       "tags": [ "magical_unicorn", "hand_limit", "buff" ]
@@ -996,19 +759,11 @@
       "copiesInDeck": 1,
       "effects": [
         {
-          "kind": "MOVE_CARD_WITH_DISCARD_COST",
-          "timing": "ON_ENTER_STABLE",
-          "optional": true,
-          "cost": {
-            "action": "DISCARD",
-            "amount": 1,
-            "from": "YOUR_HAND"
-          },
+          "kind": "STEAL_BOARD",
           "criteria": {
             "cardType": "BABY_UNICORN",
             "fromZone": "NURSERY"
-          },
-          "result": { "toZone": "YOUR_STABLE" }
+          }
         }
       ],
       "tags": [ "magical_unicorn", "discard_cost", "baby_unicorn", "summon" ]
@@ -1022,17 +777,10 @@
       "copiesInDeck": 1,
       "effects": [
         {
-          "kind": "TRIGGER_ON_EVENT",
-          "timing": "STATIC",
-          "when": {
+          "kind": "DRAW_SEARCH",
+          "criteria": {
             "events": [ "STEAL" ],
             "target": "YOUR_UNICORN_IN_STABLE"
-          },
-          "optional": true,
-          "result": {
-            "action": "RECOVER_FROM_DISCARD",
-            "cards": "ANY",
-            "toZone": "YOUR_HAND"
           }
         }
       ],
@@ -1047,12 +795,7 @@
       "copiesInDeck": 1,
       "effects": [
         {
-          "kind": "DRAW_THEN_DISCARD",
-          "timing": "START_OF_YOUR_TURN",
-          "optional": true,
-          "condition": { "selfLocation": "STABLE" },
-          "draw": 1,
-          "discard": 1
+          "kind": "DRAW_SEARCH"
         }
       ],
       "tags": [ "magical_unicorn", "draw", "discard", "filter" ]
@@ -1067,13 +810,11 @@
       "copiesInDeck": 2,
       "effects": [
         {
-          "kind": "STEAL_CARD",
-          "timing": "ON_PLAY",
+          "kind": "STEAL_BOARD",
           "criteria": {
             "cardType": "BABY_UNICORN",
             "fromZone": "NURSERY"
-          },
-          "result": { "toZone": "YOUR_STABLE" }
+          }
         }
       ],
       "tags": [ "magic", "steal", "baby_unicorn" ]
@@ -1087,14 +828,7 @@
       "copiesInDeck": 1,
       "effects": [
         {
-          "kind": "REVEAL_TOP_AND_RESOLVE",
-          "timing": "ON_PLAY",
-          "amount": 1,
-          "if": {
-            "cardType": "UNICORN",
-            "then": { "moveTo": "YOUR_STABLE" },
-            "else": { "moveTo": "YOUR_HAND" }
-          }
+          "kind": "DRAW_SEARCH"
         }
       ],
       "tags": [ "magic", "reveal", "ramp" ]
@@ -1108,11 +842,7 @@
       "copiesInDeck": 2,
       "effects": [
         {
-          "kind": "PULL_RANDOM_FROM_HAND",
-          "timing": "ON_PLAY",
-          "target": "CHOSEN_OTHER_PLAYER",
-          "amount": 2,
-          "result": { "toZone": "YOUR_HAND" }
+          "kind": "STEAL_HAND"
         }
       ],
       "tags": [ "magic", "steal_hand", "random" ]
@@ -1126,9 +856,7 @@
       "copiesInDeck": 1,
       "effects": [
         {
-          "kind": "DESTROY_ALL",
-          "timing": "ON_PLAY",
-          "target": "CHOSEN_OTHER_PLAYER",
+          "kind": "DESTROY_SACRIFICE",
           "criteria": {
             "cardType": "UPGRADE",
             "fromZone": "STABLE"
@@ -1146,28 +874,11 @@
       "copiesInDeck": 2,
       "effects": [
         {
-          "kind": "MULTI_STEP",
-          "timing": "ON_PLAY",
-          "steps": [
-            {
-              "action": "FORCE_DISCARD",
-              "target": "CHOSEN_OTHER_PLAYER",
-              "amount": 1
-            },
-            {
-              "action": "GIVE_CARD_FROM_HAND",
-              "target": "CHOSEN_PLAYER",
-              "amount": 1
-            },
-            {
-              "action": "DESTROY",
-              "criteria": {
-                "cardType": "UNICORN",
-                "fromZone": "ANY_STABLE"
-              },
-              "amount": 1
-            }
-          ]
+          "kind": "DESTROY_SACRIFICE",
+          "criteria": {
+            "cardType": "UNICORN",
+            "fromZone": "ANY_STABLE"
+          }
         }
       ],
       "tags": [ "magic", "discard", "destroy", "multi" ]
@@ -1181,14 +892,7 @@
       "copiesInDeck": 2,
       "effects": [
         {
-          "kind": "LOOK_AND_STEAL_FROM_HAND",
-          "timing": "ON_PLAY",
-          "criteria": {
-            "by": "CHOSEN_OTHER_PLAYER",
-            "fromZone": "HAND",
-            "cards": "ANY"
-          },
-          "result": { "action": "ADD_TO_HAND" }
+          "kind": "STEAL_HAND"
         }
       ],
       "tags": [ "magic", "peek", "steal_hand" ]
@@ -1202,18 +906,14 @@
       "copiesInDeck": 2,
       "effects": [
         {
-          "kind": "DESTROY",
-          "timing": "ON_PLAY",
+          "kind": "DESTROY_SACRIFICE",
           "criteria": {
             "cardType": "UNICORN",
             "fromZone": "ANY_STABLE"
-          },
-          "amount": 1
+          }
         },
         {
-          "kind": "EACH_PLAYER_DISCARD",
-          "timing": "ON_PLAY",
-          "amountEach": 1
+          "kind": "DISCARD"
         }
       ],
       "tags": [ "magic", "destroy", "discard", "each_player" ]
@@ -1227,26 +927,11 @@
       "copiesInDeck": 3,
       "effects": [
         {
-          "kind": "CHOOSE_ONE",
-          "timing": "ON_PLAY",
-          "options": [
-            {
-              "action": "DESTROY",
-              "criteria": {
-                "cardType": "UPGRADE",
-                "fromZone": "ANY_STABLE"
-              },
-              "amount": 1
-            },
-            {
-              "action": "SACRIFICE",
-              "criteria": {
-                "cardType": "DOWNGRADE",
-                "fromZone": "ANY_STABLE"
-              },
-              "amount": 1
-            }
-          ]
+          "kind": "DESTROY_SACRIFICE",
+          "criteria": {
+            "cardType": "UPGRADE_OR_DOWNGRADE",
+            "fromZone": "ANY_STABLE"
+          }
         }
       ],
       "tags": [ "magic", "destroy", "sacrifice", "utility" ]
@@ -1260,17 +945,7 @@
       "copiesInDeck": 1,
       "effects": [
         {
-          "kind": "EXTRA_TURN_WITH_DISCARD_COST",
-          "timing": "ON_PLAY",
-          "cost": {
-            "action": "DISCARD",
-            "amount": 2,
-            "from": "YOUR_HAND"
-          },
-          "result": {
-            "draw": 2,
-            "extraTurn": true
-          }
+          "kind": "RULE_MOD"
         }
       ],
       "tags": [ "magic", "discard_cost", "draw", "extra_turn" ]
@@ -1284,13 +959,7 @@
       "copiesInDeck": 1,
       "effects": [
         {
-          "kind": "EXTRA_TURN_WITH_DISCARD_HAND_COST",
-          "timing": "ON_PLAY",
-          "cost": { "action": "DISCARD_HAND" },
-          "result": {
-            "draw": 3,
-            "extraTurn": true
-          }
+          "kind": "RULE_MOD"
         }
       ],
       "tags": [ "magic", "discard_hand", "draw", "extra_turn" ]
@@ -1304,20 +973,7 @@
       "copiesInDeck": 1,
       "effects": [
         {
-          "kind": "RESET_GAMESTATE",
-          "timing": "ON_PLAY",
-          "steps": [
-            {
-              "action": "EACH_PLAYER_SACRIFICE",
-              "amountEach": 1
-            },
-            { "action": "EACH_PLAYER_DISCARD_HAND" },
-            { "action": "SHUFFLE_DISCARD_INTO_DECK" },
-            {
-              "action": "EACH_PLAYER_DRAW",
-              "amountEach": 5
-            }
-          ]
+          "kind": "GLOBAL_RESET"
         }
       ],
       "tags": [ "magic", "wipe", "reset", "each_player" ]
@@ -1331,15 +987,10 @@
       "copiesInDeck": 1,
       "effects": [
         {
-          "kind": "EACH_PLAYER_MOVE",
-          "timing": "ON_PLAY",
+          "kind": "STEAL_BOARD",
           "criteria": {
             "cardType": "BABY_UNICORN",
             "fromZone": "STABLE"
-          },
-          "result": {
-            "moveTo": "NURSERY",
-            "amountEach": 1
           }
         }
       ],
@@ -1354,24 +1005,14 @@
       "copiesInDeck": 1,
       "effects": [
         {
-          "kind": "TARGET_CHOOSE_ONE",
-          "timing": "ON_PLAY",
-          "target": "CHOSEN_PLAYER",
-          "options": [
-            {
-              "action": "DISCARD",
-              "amount": 3,
-              "from": "TARGET_HAND"
-            },
-            {
-              "action": "SACRIFICE",
-              "criteria": {
-                "cardType": "UNICORN",
-                "fromZone": "TARGET_STABLE"
-              },
-              "amount": 1
-            }
-          ]
+          "kind": "DESTROY_SACRIFICE",
+          "criteria": {
+            "cardType": "UNICORN",
+            "fromZone": "TARGET_STABLE"
+          }
+        },
+        {
+          "kind": "DISCARD"
         }
       ],
       "tags": [ "magic", "discard", "sacrifice", "control" ]
@@ -1385,13 +1026,7 @@
       "copiesInDeck": 1,
       "effects": [
         {
-          "kind": "WHEEL_PLUS",
-          "timing": "ON_PLAY",
-          "eachPlayer": {
-            "discardHand": true,
-            "drawSameAsDiscarded": true
-          },
-          "youAdditionalDraw": 2
+          "kind": "DRAW_SEARCH"
         }
       ],
       "tags": [ "magic", "wheel", "draw", "each_player" ]
@@ -1405,8 +1040,7 @@
       "copiesInDeck": 1,
       "effects": [
         {
-          "kind": "SACRIFICE_ALL",
-          "timing": "ON_PLAY",
+          "kind": "DESTROY_SACRIFICE",
           "criteria": {
             "cardType": "DOWNGRADE",
             "fromZone": "YOUR_STABLE"
@@ -1424,9 +1058,7 @@
       "copiesInDeck": 1,
       "effects": [
         {
-          "kind": "SKIP_NEXT_TURN",
-          "timing": "ON_PLAY",
-          "target": "CHOSEN_OTHER_PLAYER"
+          "kind": "RULE_MOD"
         }
       ],
       "tags": [ "magic", "skip_turn", "control" ]
@@ -1440,9 +1072,8 @@
       "copiesInDeck": 2,
       "effects": [
         {
-          "kind": "DRAW_EQUAL_TO_COUNT",
-          "timing": "ON_PLAY",
-          "countWhat": {
+          "kind": "DRAW_SEARCH",
+          "criteria": {
             "cardType": "BASIC_UNICORN",
             "zone": "YOUR_STABLE"
           }
@@ -1460,17 +1091,7 @@
       "copiesInDeck": 3,
       "effects": [
         {
-          "kind": "COUNTER_PLAY",
-          "timing": "ON_OTHER_PLAYER_ATTEMPT_PLAY",
-          "optional": true,
-          "criteria": {
-            "cards": "ANY",
-            "by": "OTHER_PLAYER"
-          },
-          "result": {
-            "preventPlay": true,
-            "movePlayedCardTo": "DISCARD"
-          }
+          "kind": "COUNTER"
         }
       ],
       "tags": [ "instant", "reaction", "counter" ]
@@ -1484,17 +1105,7 @@
       "copiesInDeck": 3,
       "effects": [
         {
-          "kind": "COUNTER_PLAY",
-          "timing": "ON_OTHER_PLAYER_ATTEMPT_PLAY",
-          "optional": true,
-          "criteria": {
-            "cards": "ANY",
-            "by": "OTHER_PLAYER"
-          },
-          "result": {
-            "preventPlay": true,
-            "movePlayedCardTo": "DISCARD"
-          }
+          "kind": "COUNTER"
         }
       ],
       "tags": [ "instant", "reaction", "counter" ]
@@ -1508,21 +1119,7 @@
       "copiesInDeck": 3,
       "effects": [
         {
-          "kind": "COUNTER_PLAY_PLUS",
-          "timing": "ON_OTHER_PLAYER_ATTEMPT_PLAY",
-          "optional": true,
-          "criteria": {
-            "cards": "ANY",
-            "by": "OTHER_PLAYER"
-          },
-          "result": {
-            "preventPlay": true,
-            "movePlayedCardTo": "DISCARD",
-            "forceDiscard": {
-              "target": "THAT_PLAYER",
-              "amount": 1
-            }
-          }
+          "kind": "COUNTER"
         }
       ],
       "tags": [ "instant", "reaction", "counter", "discard" ]
@@ -1536,22 +1133,13 @@
       "copiesInDeck": 1,
       "effects": [
         {
-          "kind": "COUNTER_PLAY",
-          "timing": "ON_OTHER_PLAYER_ATTEMPT_PLAY",
-          "optional": true,
-          "criteria": {
-            "cards": "ANY",
-            "by": "OTHER_PLAYER"
-          },
-          "result": {
-            "preventPlay": true,
-            "movePlayedCardTo": "DISCARD"
-          }
+          "kind": "COUNTER"
         },
         {
-          "kind": "CANNOT_BE_COUNTERED",
-          "timing": "STATIC",
-          "byCardType": "NEIGH"
+          "kind": "PROTECT",
+          "criteria": {
+            "byCardType": "NEIGH"
+          }
         }
       ],
       "tags": [ "instant", "reaction", "counter", "uncounterable" ]
@@ -1565,17 +1153,7 @@
       "copiesInDeck": 5,
       "effects": [
         {
-          "kind": "COUNTER_PLAY",
-          "timing": "ON_OTHER_PLAYER_ATTEMPT_PLAY",
-          "optional": true,
-          "criteria": {
-            "cards": "ANY",
-            "by": "OTHER_PLAYER"
-          },
-          "result": {
-            "preventPlay": true,
-            "movePlayedCardTo": "DISCARD"
-          }
+          "kind": "COUNTER"
         }
       ],
       "tags": [ "instant", "reaction", "counter" ]
@@ -1590,18 +1168,7 @@
       "copiesInDeck": 2,
       "effects": [
         {
-          "kind": "REPLACE_EVENT_WITH_COST",
-          "timing": "STATIC",
-          "optional": true,
-          "when": {
-            "events": [ "SACRIFICE", "DESTROY" ],
-            "target": "YOUR_UNICORN_IN_STABLE"
-          },
-          "cost": {
-            "action": "SACRIFICE",
-            "target": "SELF"
-          },
-          "replaceWith": { "preventOriginal": true }
+          "kind": "PROTECT"
         }
       ],
       "tags": [ "upgrade", "protection", "replacement" ]
@@ -1615,16 +1182,11 @@
       "copiesInDeck": 1,
       "effects": [
         {
-          "kind": "MOVE_UNICORN_BETWEEN_STABLES",
-          "timing": "START_OF_YOUR_TURN",
-          "optional": true,
-          "condition": { "selfLocation": "STABLE" },
+          "kind": "STEAL_BOARD",
           "criteria": {
             "cardType": "UNICORN",
             "fromZone": "ANY_STABLE"
-          },
-          "restriction": { "cannotMoveTo": "YOUR_STABLE" },
-          "result": { "toZone": "CHOSEN_OTHER_PLAYER_STABLE" }
+          }
         }
       ],
       "tags": [ "upgrade", "move", "control" ]
@@ -1638,18 +1200,10 @@
       "copiesInDeck": 1,
       "effects": [
         {
-          "kind": "STEAL_CARD",
-          "timing": "START_OF_YOUR_TURN",
-          "optional": true,
-          "condition": { "selfLocation": "STABLE" },
+          "kind": "STEAL_BOARD",
           "criteria": {
             "cardType": "UNICORN",
             "fromZone": "OTHER_PLAYER_STABLE"
-          },
-          "result": {
-            "toZone": "YOUR_STABLE",
-            "linkToSource": true,
-            "returnAtEndOfTurn": true
           }
         }
       ],
@@ -1664,16 +1218,7 @@
       "copiesInDeck": 2,
       "effects": [
         {
-          "kind": "PULL_RANDOM_AND_SKIP_DRAW",
-          "timing": "START_OF_YOUR_TURN",
-          "optional": true,
-          "condition": { "selfLocation": "STABLE" },
-          "target": "CHOSEN_OTHER_PLAYER",
-          "amount": 1,
-          "result": {
-            "toZone": "YOUR_HAND",
-            "skipPhase": "DRAW"
-          }
+          "kind": "STEAL_HAND"
         }
       ],
       "tags": [ "upgrade", "steal_hand", "skip_draw" ]
@@ -1687,26 +1232,7 @@
       "copiesInDeck": 2,
       "effects": [
         {
-          "kind": "SACRIFICE_THEN_DESTROY",
-          "timing": "START_OF_YOUR_TURN",
-          "optional": true,
-          "condition": { "selfLocation": "STABLE" },
-          "cost": {
-            "action": "SACRIFICE",
-            "criteria": {
-              "cards": "ANY",
-              "fromZone": "YOUR_STABLE_OR_HAND"
-            },
-            "amount": 1
-          },
-          "result": {
-            "action": "DESTROY",
-            "criteria": {
-              "cards": "ANY",
-              "fromZone": "ANY_STABLE"
-            },
-            "amount": 1
-          }
+          "kind": "DESTROY_SACRIFICE"
         }
       ],
       "tags": [ "upgrade", "destroy", "sacrifice_cost" ]
@@ -1720,12 +1246,7 @@
       "copiesInDeck": 1,
       "effects": [
         {
-          "kind": "PREVENT_EVENT",
-          "timing": "STATIC",
-          "when": {
-            "events": [ "DESTROY" ],
-            "target": "YOUR_UNICORN_IN_STABLE"
-          }
+          "kind": "PROTECT"
         }
       ],
       "tags": [ "upgrade", "protection", "anti_destroy" ]
@@ -1739,14 +1260,7 @@
       "copiesInDeck": 1,
       "effects": [
         {
-          "kind": "EXTRA_PLAYS",
-          "timing": "START_OF_YOUR_TURN",
-          "optional": true,
-          "condition": { "selfLocation": "STABLE" },
-          "result": {
-            "extraCardsYouMayPlayThisTurn": 1,
-            "totalPlaysThisTurn": 2
-          }
+          "kind": "RULE_MOD"
         }
       ],
       "tags": [ "upgrade", "tempo", "extra_play" ]
@@ -1760,9 +1274,8 @@
       "copiesInDeck": 2,
       "effects": [
         {
-          "kind": "PLAY_REQUIREMENT",
-          "timing": "STATIC",
-          "requirement": {
+          "kind": "RULE_MOD",
+          "criteria": {
             "yourStableHas": {
               "cardType": "BASIC_UNICORN",
               "amountAtLeast": 1
@@ -1770,11 +1283,7 @@
           }
         },
         {
-          "kind": "DRAW",
-          "timing": "START_OF_YOUR_TURN",
-          "optional": true,
-          "condition": { "selfLocation": "STABLE" },
-          "amount": 1
+          "kind": "DRAW_SEARCH"
         }
       ],
       "tags": [ "upgrade", "requirement", "draw" ]
@@ -1788,14 +1297,7 @@
       "copiesInDeck": 2,
       "effects": [
         {
-          "kind": "DELAYED_DRAW",
-          "timing": "START_OF_YOUR_TURN",
-          "optional": true,
-          "condition": { "selfLocation": "STABLE" },
-          "result": {
-            "drawAt": "END_OF_YOUR_TURN",
-            "amount": 1
-          }
+          "kind": "DRAW_SEARCH"
         }
       ],
       "tags": [ "upgrade", "draw", "delayed" ]
@@ -1809,9 +1311,8 @@
       "copiesInDeck": 1,
       "effects": [
         {
-          "kind": "PLAY_REQUIREMENT",
-          "timing": "STATIC",
-          "requirement": {
+          "kind": "RULE_MOD",
+          "criteria": {
             "yourStableHas": {
               "cardType": "BASIC_UNICORN",
               "amountAtLeast": 1
@@ -1819,15 +1320,11 @@
           }
         },
         {
-          "kind": "PUT_FROM_HAND_TO_STABLE",
-          "timing": "START_OF_YOUR_TURN",
-          "optional": true,
-          "condition": { "selfLocation": "STABLE" },
+          "kind": "STEAL_BOARD",
           "criteria": {
             "cardType": "BASIC_UNICORN",
             "fromZone": "YOUR_HAND"
-          },
-          "result": { "toZone": "YOUR_STABLE" }
+          }
         }
       ],
       "tags": [ "upgrade", "requirement", "cheat_into_play" ]
@@ -1842,11 +1339,7 @@
       "copiesInDeck": 1,
       "effects": [
         {
-          "kind": "FORCE_DISCARD",
-          "timing": "START_OF_YOUR_TURN",
-          "amount": 1,
-          "condition": { "selfLocation": "STABLE" },
-          "target": "YOU"
+          "kind": "DISCARD"
         }
       ],
       "tags": [ "downgrade", "penalty", "discard" ]
@@ -1860,12 +1353,7 @@
       "copiesInDeck": 1,
       "effects": [
         {
-          "kind": "CHANGE_TRAIT_AND_IMMUNITY",
-          "timing": "STATIC",
-          "effect": {
-            "yourUnicornsCountAs": "SHITS",
-            "unicornTargetingDoesNotAffect": "YOUR_SHITS"
-          }
+          "kind": "RULE_MOD"
         }
       ],
       "tags": [ "downgrade", "weird_rules", "protection" ]
@@ -1879,9 +1367,8 @@
       "copiesInDeck": 1,
       "effects": [
         {
-          "kind": "RESTRICT_PLAY",
-          "timing": "STATIC",
-          "restriction": {
+          "kind": "RULE_MOD",
+          "criteria": {
             "forbiddenTypes": [ "UpgradeCard" ],
             "appliesTo": "YOU"
           }
@@ -1898,15 +1385,10 @@
       "copiesInDeck": 1,
       "effects": [
         {
-          "kind": "NULLIFY_EFFECTS",
-          "timing": "STATIC",
+          "kind": "RULE_MOD",
           "criteria": {
             "cardType": "UNICORN",
             "zone": "YOUR_STABLE"
-          },
-          "result": {
-            "treatAs": "Basic Unicorn",
-            "removeEffects": true
           }
         }
       ],
@@ -1921,10 +1403,7 @@
       "copiesInDeck": 1,
       "effects": [
         {
-          "kind": "SKIP_PHASE_CHOICE",
-          "timing": "START_OF_YOUR_TURN",
-          "condition": { "selfLocation": "STABLE" },
-          "choices": [ "DRAW", "ACTION" ]
+          "kind": "RULE_MOD"
         }
       ],
       "tags": [ "downgrade", "skip_phase", "penalty" ]
@@ -1938,10 +1417,11 @@
       "copiesInDeck": 1,
       "effects": [
         {
-          "kind": "HAND_LIMIT_MOD",
-          "timing": "STATIC",
-          "amount": -4,
-          "appliesTo": "YOU"
+          "kind": "RULE_MOD",
+          "criteria": {
+            "amount": -4,
+            "appliesTo": "YOU"
+          }
         }
       ],
       "tags": [ "downgrade", "hand_limit", "penalty" ]
@@ -1955,31 +1435,20 @@
       "copiesInDeck": 1,
       "effects": [
         {
-          "kind": "BOUNCE_OWN_UNICORN",
-          "timing": "START_OF_YOUR_TURN",
-          "condition": { "selfLocation": "STABLE" },
+          "kind": "STEAL_BOARD",
           "criteria": {
             "cardType": "UNICORN",
             "fromZone": "YOUR_STABLE"
-          },
-          "result": {
-            "moveTo": "YOUR_HAND",
-            "amount": 1
           }
         },
         {
-          "kind": "SACRIFICE_SELF_IF_CONDITION",
-          "timing": "STATIC",
-          "condition": {
+          "kind": "DESTROY_SACRIFICE",
+          "criteria": {
             "yourStableHas": {
               "cardType": "UNICORN",
               "amountAtLeast": 0
             },
             "sacrificeIfAmountEquals": 0
-          },
-          "result": {
-            "action": "SACRIFICE",
-            "target": "SELF"
           }
         }
       ],

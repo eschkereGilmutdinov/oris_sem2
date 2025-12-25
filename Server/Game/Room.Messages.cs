@@ -131,5 +131,33 @@ namespace Server.Game
                 try { await Protocol.WriteJsonAsync(c.Stream, msg); } catch { }
             }
         }
+
+        private async Task BroadcastHandAsync(string playerId)
+        {
+            ClientConn? target;
+            object[] cards;
+
+            lock (_locker)
+            {
+                target = _clients.FirstOrDefault(c => c.Player.PlayerId == playerId);
+                if (target == null) return;
+
+                _hands.TryGetValue(playerId, out var hand);
+                hand ??= new List<CardInstance>();
+
+                cards = hand
+                    .Select(ci => new { instanceId = ci.InstanceId, cardId = ci.CardId })
+                    .Cast<object>()
+                    .ToArray();
+            }
+
+            var msg = new
+            {
+                type = "HAND",
+                payload = new { cards }
+            };
+
+            try { await Protocol.WriteJsonAsync(target.Stream, msg); } catch { }
+        }
     }
 }

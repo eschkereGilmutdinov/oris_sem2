@@ -34,12 +34,14 @@ public partial class Room
     private Dictionary<string, List<CardInstance>> _stalls = new();
 
     private readonly Dictionary<string, CardDefinition> _cardById;
+    public Dictionary<string, CardDefinition> CardById => _cardById;
+
     private readonly CardCatalog _catalog;
 
     public Room()
     {
         _catalog = CardLoader.LoadFromFile("Assets/cards.json");
-        _cardById = _catalog.Cards.ToDictionary(c => c.Id, StringComparer.Ordinal);
+        _cardById = _catalog.Cards.ToDictionary(c => c.Id, c => c);
     }
 
     public async Task<bool> TryJoinAsync(TcpClient tcp)
@@ -160,7 +162,7 @@ public partial class Room
 
                     if (action.Equals("DRAW_BABY", StringComparison.OrdinalIgnoreCase))
                     {
-                        await HandleDrawBabyAsync(me, stream);
+                        await SendErrorAsync(stream, "Малышей из яслей можно брать только эффектами карт.");
                         continue;
                     }
 

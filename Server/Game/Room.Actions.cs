@@ -165,17 +165,53 @@ namespace Server.Game
             }
 
             CardInstance? played = null;
+            CardDefinition? playedDef = null;
+            bool foundInHand = false;
+
+            lock (_locker)
+            {
+                if (_hands.TryGetValue(me.Player.PlayerId, out var hand))
+                {
+                    played = hand.FirstOrDefault(x => x.InstanceId == instanceId);
+                    if (played != null)
+                    {
+                        foundInHand = true;
+
+                        _cardById.TryGetValue(played.CardId, out playedDef);
+                    }
+                }
+            }
+
+            if (played == null)
+            {
+                await SendErrorAsync(stream, "Этой карты нет в вашей руке");
+                return;
+            }
+
+            if (playedDef == null)
+            {
+                await SendErrorAsync(stream, "Неизвестная карта");
+                return;
+            }
+
+            if (!CanPlayCard(me.Player.PlayerId, playedDef))
+            {
+                await SendErrorAsync(stream, "Вы не можете разыграть эту карту из-за эффектов на столе");
+                return;
+            }
 
             lock (_locker)
             {
                 if (!_hands.TryGetValue(me.Player.PlayerId, out var hand))
-                    _hands[me.Player.PlayerId] = hand = new List<CardInstance>();
+                {
+                    hand = new List<CardInstance>();
+                    _hands[me.Player.PlayerId] = hand;
+                }
 
-                played = hand.FirstOrDefault(x => x.InstanceId == instanceId);
-                if (played == null)
+                if (!hand.Remove(played))
+                {
                     return;
-
-                hand.Remove(played);
+                }
 
                 if (!_stalls.TryGetValue(me.Player.PlayerId, out var stall))
                     _stalls[me.Player.PlayerId] = stall = new List<CardInstance>();
@@ -186,13 +222,10 @@ namespace Server.Game
                 _phase = TurnPhase.Discarding;
             }
 
-            if (played == null)
-            {
-                await SendErrorAsync(stream, "Этой карты нет в вашей руке");
-                return;
-            }
+            await ApplyOnPlayEffectsAsync(me.Player.PlayerId, played);
 
             await BroadcastStallAsync(me.Player.PlayerId);
+            await BroadcastStateAsync();
             await AdvanceTurnOrWinAsync(me.Player.PlayerId);
         }
 

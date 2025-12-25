@@ -93,7 +93,10 @@ namespace Server.Game
             {
                 if (_currentTurnPlayerId == null) return;
 
-                needDiscard = _hands.TryGetValue(_currentTurnPlayerId, out var hand) && hand.Count > 7;
+                var limit = GetHandLimitForPlayer(_currentTurnPlayerId);
+
+                needDiscard = _hands.TryGetValue(_currentTurnPlayerId, out var hand)
+                                  && hand.Count > limit;
 
                 if (needDiscard)
                 {
